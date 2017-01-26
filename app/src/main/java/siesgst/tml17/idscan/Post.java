@@ -20,7 +20,7 @@ public class Post {
     String user;
     String pass;
     private Request request;
-    String responseString;
+    String responseString = "hello";
 
 
     public Post(String user, String pass) {
@@ -31,13 +31,12 @@ public class Post {
 
     String postToDb() {
         Log.d("tag","inside post");
-        String url = "http://192.168.137.219";
+        String url = "http://172.20.10.2/login.php";
         OkHttpClient client = new OkHttpClient();
         RequestBody body = new FormBody.Builder()
-                .add("username", user)
+                .add("email", user)
                 .add("password", pass)
                 .build();
-        Log.d("url",body.toString());
         request = new Request.Builder()
                 .url(url)
                 .method("POST", body.create(null, new byte[0]))
@@ -56,6 +55,7 @@ public class Post {
                 Log.v("response", responseString);
             }
         });
+        Log.v("response", responseString);
         return responseString;
     }
 }

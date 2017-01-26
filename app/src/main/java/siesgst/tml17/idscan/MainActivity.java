@@ -67,7 +67,8 @@ public class MainActivity extends AppCompatActivity {
 
                 Post post = new Post(username.getText().toString(),password.getText().toString());
                 String response = post.postToDb();
-                if(response.equals("done")) {
+                Log.v("tah","hfgfs");
+                if(response.contains("true")) {
                     Log.v("Logged in","LOGIN");
                     scan();
 

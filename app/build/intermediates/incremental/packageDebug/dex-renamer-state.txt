@@ -1,7 +1,4 @@
-#Thu Jan 19 14:00:10 IST 2017
-base.0=/home/leprechaun/AndroidStudioProjects/Idscan/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_aa6ec82ed6920b373544215ca2c2dac852ae3ca6
-renamed.1=classes2.dex
+#Wed Jan 25 20:47:23 IST 2017
+base.0=/Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
-file.1=/home/leprechaun/AndroidStudioProjects/Idscan/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_8545ac128bf68ecac71322eda0adcaf161272e0d/classes.dex
-base.1=/home/leprechaun/AndroidStudioProjects/Idscan/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_8545ac128bf68ecac71322eda0adcaf161272e0d
-file.0=/home/leprechaun/AndroidStudioProjects/Idscan/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_aa6ec82ed6920b373544215ca2c2dac852ae3ca6/classes.dex
+file.0=/Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

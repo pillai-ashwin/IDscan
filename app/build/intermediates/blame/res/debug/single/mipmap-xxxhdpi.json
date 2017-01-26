@@ -2,5 +2,9 @@
     {
         "merged": "/home/leprechaun/AndroidStudioProjects/Idscan/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher.png",
         "source": "/home/leprechaun/AndroidStudioProjects/Idscan/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher.png",
+        "source": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     }
 ]
