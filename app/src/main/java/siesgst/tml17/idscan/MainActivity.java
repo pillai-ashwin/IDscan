@@ -13,11 +13,23 @@ import android.widget.Toast;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
+import java.io.IOException;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.FormBody;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
+
 public class MainActivity extends AppCompatActivity {
     String barcode_scan;
     SessionManager sessionManager;
     EditText username,password;
     Button login;
+    private Request request;
+    String responseString;
 //    BackgroundWorker backgroundWorker
 
     @Override
@@ -65,14 +77,35 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Post post = new Post(username.getText().toString(),password.getText().toString());
-                String response = post.postToDb();
-                Log.v("tah","hfgfs");
-                if(response.contains("true")) {
-                    Log.v("Logged in","LOGIN");
-                    scan();
+               // Post post = new Post(username.getText().toString(),password.getText().toString());
+                //String response = post.postToDb();
+                String url = "http://192.168.1.36/login.php";
+                OkHttpClient client = new OkHttpClient();
+                RequestBody body = new FormBody.Builder()
+                        .add("email", username.getText().toString())
+                        .add("password", password.getText().toString())
+                        .build();
+                request = new Request.Builder()
+                        .url(url)
+                        .method("POST", body.create(null, new byte[0]))
+                        .post(body)
+                        .build();
 
-                }
+                client.newCall(request).enqueue(new Callback() {
+                    @Override
+                    public void onFailure(Call call, IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    @Override
+                    public void onResponse(Call call, Response response) throws IOException {
+                        responseString = response.body().string();
+                        Log.v("response", responseString);
+                        if (responseString.contains("true"))
+                            scan();
+                    }
+
+                });
             }
         });
     }
