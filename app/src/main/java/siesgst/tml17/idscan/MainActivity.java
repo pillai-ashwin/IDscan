@@ -2,8 +2,8 @@ package siesgst.tml17.idscan;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +12,10 @@ import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
 
@@ -101,8 +105,35 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(Call call, Response response) throws IOException {
                         responseString = response.body().string();
                         Log.v("response", responseString);
-                        if (responseString.contains("true"))
+                        if (responseString.contains("true")) {
+
+                            JSONObject root = null;
+                            try {
+                                root = new JSONObject(responseString);
+                                String status = root.optString("status");
+                                String message = root.optString("message");
+                                JSONArray result = root.optJSONArray("result");
+                                for(int i=0;i<result.length();i++)
+                                {
+                                    JSONObject resultArrayObject = result.optJSONObject(i);
+                                    String id = resultArrayObject.optString("id");
+                                    String fname = resultArrayObject.optString("fname");
+                                    String lname = resultArrayObject.optString("lname");
+                                    String email = resultArrayObject.optString("email");
+                                    String contact = resultArrayObject.optString("contact");
+                                    String event_id = resultArrayObject.optString("event_id");
+                                    String event_name = resultArrayObject.optString("event_name");
+                                    String created = resultArrayObject.optString("created_at");
+                                    String updated = resultArrayObject.optString("updated_at");
+                                    Long created_at = Long.parseLong(created);
+                                    Long updated_at = Long.parseLong(updated);
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
                             scan();
+                        }
                     }
 
                 });
