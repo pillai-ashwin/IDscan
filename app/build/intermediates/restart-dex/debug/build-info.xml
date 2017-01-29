@@ -5,34 +5,27 @@
     density="xhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="192141470614766"
+    timestamp="128208820501388"
     token="-7864189982916933913"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="131" />
+        duration="2249" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="27" />
+        duration="207" />
     <task
         name="verifier"
-        duration="0" />
+        duration="83" />
 
     <artifact
-        location="/home/leprechaun/AndroidStudioProjects/Idscan/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
-        type="DEX" />
+        location="/home/leprechaun/AndroidStudioProjects/Idscan/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
 
-    <build
-        timestamp="191894648548421"
-        verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="/home/leprechaun/AndroidStudioProjects/Idscan/app/build/outputs/apk/app-debug.apk"
-            type="MAIN" />
-    </build>
     <build
         timestamp="192141470614766"
         verifier="COLD_SWAP_REQUESTED" >

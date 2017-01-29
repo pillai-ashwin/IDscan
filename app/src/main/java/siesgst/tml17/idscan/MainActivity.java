@@ -86,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
                // Post post = new Post(username.getText().toString(),password.getText().toString());
                 //String response = post.postToDb();
+<<<<<<< HEAD
                 if(username.getText().toString().equals("a")){
 
                     progressDialog.setCancelable(false);
@@ -98,6 +99,9 @@ public class MainActivity extends AppCompatActivity {
                     //scan();
                 }
                 String url = "http://192.168.1.103/login.php";
+=======
+                String url = "http://127.0.0.1/login.php";
+>>>>>>> origin/master
                 OkHttpClient client = new OkHttpClient();
 
                 RequestBody body = new FormBody.Builder()
