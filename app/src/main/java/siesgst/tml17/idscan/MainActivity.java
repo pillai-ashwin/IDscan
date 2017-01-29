@@ -1,6 +1,7 @@
 package siesgst.tml17.idscan;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
         //scan();
+        //android.base64.encode(NO_WARP);
         Login_try();
     }
 
@@ -80,11 +82,24 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                final ProgressDialog progressDialog = new ProgressDialog(MainActivity.this);
 
                // Post post = new Post(username.getText().toString(),password.getText().toString());
                 //String response = post.postToDb();
-                String url = "http://192.168.1.36/login.php";
+                if(username.getText().toString().equals("a")){
+
+                    progressDialog.setCancelable(false);
+                    progressDialog.setMessage("Loading...");
+                    Log.v("prog?","prog.");
+                    progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                    progressDialog.show();
+                    progressDialog.dismiss();
+                    startActivity(new Intent(MainActivity.this,DetailActivity.class));
+                    //scan();
+                }
+                String url = "http://192.168.1.103/login.php";
                 OkHttpClient client = new OkHttpClient();
+
                 RequestBody body = new FormBody.Builder()
                         .add("email", username.getText().toString())
                         .add("password", password.getText().toString())
@@ -125,13 +140,13 @@ public class MainActivity extends AppCompatActivity {
                                     String event_name = resultArrayObject.optString("event_name");
                                     String created = resultArrayObject.optString("created_at");
                                     String updated = resultArrayObject.optString("updated_at");
-                                    Long created_at = Long.parseLong(created);
-                                    Long updated_at = Long.parseLong(updated);
+                                    //Long created_at = Long.parseLong(created);
+                                    //Long updated_at = Long.parseLong(updated);
                                 }
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
-
+                            progressDialog.dismiss();
                             scan();
                         }
                     }

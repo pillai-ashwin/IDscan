@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:2:1-23:12
+ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:2:1-24:12
 	package
 		ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:3:5-35
 		INJECTED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml
@@ -14,11 +14,11 @@ ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/Andro
 		INJECTED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:4:5-6:23
+ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:5:5-83
 	android:name
-		ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:4:22-64
+		ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:8:5-21:19
+ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:7:5-22:19
 MERGED from [com.android.support:appcompat-v7:25.1.0] /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:25.1.0] /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.0/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-fragment:25.1.0] /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.0/AndroidManifest.xml:25:5-20
@@ -30,29 +30,35 @@ MERGED from [com.android.support:support-vector-drawable:25.1.0] /Users/rohitram
 MERGED from [com.android.support:support-compat:25.1.0] /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/AndroidManifest.xml:25:5-20
 MERGED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:45:5-53:19
 	android:label
-		ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:11:9-41
+		ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:10:9-41
 	android:supportsRtl
-		ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:12:9-35
+		ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:11:9-35
 	android:allowBackup
-		ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:9:9-35
+		ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:8:9-35
 	android:icon
-		ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:10:9-43
+		ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:9:9-43
 	android:theme
-		ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:13:9-40
+		ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:12:9-40
 activity#siesgst.tml17.idscan.MainActivity
-ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:14:9-20:20
+ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:13:9-19:20
 	android:name
-		ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:14:19-47
+		ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:13:19-47
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:15:13-19:29
+ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:14:13-18:29
 action#android.intent.action.MAIN
-ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:16:17-69
+ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:15:17-69
 	android:name
-		ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:16:25-66
+		ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:15:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:18:17-77
+ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:17:17-77
 	android:name
-		ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:18:27-74
+		ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:17:27-74
+activity#siesgst.tml17.idscan.DetailActivity
+ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:20:9-21:51
+	android:screenOrientation
+		ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:21:13-49
+	android:name
+		ADDED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml:20:19-49
 uses-sdk
 INJECTED from /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:25.1.0] /Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/AndroidManifest.xml:21:5-23:78
