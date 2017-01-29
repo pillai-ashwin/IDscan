@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
                // Post post = new Post(username.getText().toString(),password.getText().toString());
                 //String response = post.postToDb();
-                String url = "http://192.168.1.36/login.php";
+                String url = "http://127.0.0.1/login.php";
                 OkHttpClient client = new OkHttpClient();
                 RequestBody body = new FormBody.Builder()
                         .add("email", username.getText().toString())
