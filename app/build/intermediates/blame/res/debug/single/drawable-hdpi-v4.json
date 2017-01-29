@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/home/leprechaun/AndroidStudioProjects/Idscan/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/notify_panel_notification_icon_bg.png",
-        "source": "/home/leprechaun/AndroidStudioProjects/Idscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
-    },
-    {
         "merged": "/home/leprechaun/AndroidStudioProjects/Idscan/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_selector_disabled_holo_light.9.png",
         "source": "/home/leprechaun/AndroidStudioProjects/Idscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable-hdpi-v4/abc_list_selector_disabled_holo_light.9.png"
+    },
+    {
+        "merged": "/home/leprechaun/AndroidStudioProjects/Idscan/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/notify_panel_notification_icon_bg.png",
+        "source": "/home/leprechaun/AndroidStudioProjects/Idscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
     },
     {
         "merged": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/notify_panel_notification_icon_bg.png",
@@ -96,12 +96,12 @@
         "source": "/home/leprechaun/AndroidStudioProjects/Idscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
-        "merged": "/home/leprechaun/AndroidStudioProjects/Idscan/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_015.png",
-        "source": "/home/leprechaun/AndroidStudioProjects/Idscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
-    },
-    {
         "merged": "/home/leprechaun/AndroidStudioProjects/Idscan/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png",
         "source": "/home/leprechaun/AndroidStudioProjects/Idscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/leprechaun/AndroidStudioProjects/Idscan/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_015.png",
+        "source": "/home/leprechaun/AndroidStudioProjects/Idscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
     },
     {
         "merged": "/home/leprechaun/AndroidStudioProjects/Idscan/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/notification_bg_normal_pressed.9.png",
