@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     Button login;
     private Request request;
     String responseString;
+    String event_id;
 //    BackgroundWorker backgroundWorker
 
     @Override
@@ -87,18 +88,17 @@ public class MainActivity extends AppCompatActivity {
                // Post post = new Post(username.getText().toString(),password.getText().toString());
                 //String response = post.postToDb();
 
-                if(username.getText().toString().equals("a")){
+//                if(username.getText().toString().equals("a")){
 
                     progressDialog.setCancelable(false);
                     progressDialog.setMessage("Loading...");
                     Log.v("prog?","prog.");
                     progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
                     progressDialog.show();
-                    progressDialog.dismiss();
-                    startActivity(new Intent(MainActivity.this,DetailActivity.class));
+                    //progressDialog.dismiss();
                     //scan();
-                }
-                String url = "http://192.168.1.103/login.php";
+//                }
+                String url = "http://192.168.43.221/login.php";
                 OkHttpClient client = new OkHttpClient();
 
                 RequestBody body = new FormBody.Builder()
@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
                                     String lname = resultArrayObject.optString("lname");
                                     String email = resultArrayObject.optString("email");
                                     String contact = resultArrayObject.optString("contact");
-                                    String event_id = resultArrayObject.optString("event_id");
+                                    event_id = resultArrayObject.optString("event_id");
                                     String event_name = resultArrayObject.optString("event_name");
                                     String created = resultArrayObject.optString("created_at");
                                     String updated = resultArrayObject.optString("updated_at");
@@ -147,8 +147,11 @@ public class MainActivity extends AppCompatActivity {
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
+                            Intent intent = new Intent(MainActivity.this,DetailActivity.class);
+                            intent.putExtra("id",event_id);
+                            startActivity(intent);
                             progressDialog.dismiss();
-                            scan();
+                            //scan();
                         }
                     }
 
