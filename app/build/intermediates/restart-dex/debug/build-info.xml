@@ -5,33 +5,47 @@
     density="xhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="128208820501388"
-    token="-7864189982916933913"
-    verifier="FULL_BUILD_REQUESTED" >
+    timestamp="6068097124919"
+    token="-8762772928771350293"
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="2249" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="207" />
+        duration="0" />
     <task
         name="verifier"
-        duration="83" />
+        duration="0" />
 
     <artifact
-        location="/home/leprechaun/AndroidStudioProjects/Idscan/app/build/outputs/apk/app-debug.apk"
-        type="MAIN" />
+        location="/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
+        type="RESOURCES" />
 
     <build
-        timestamp="192141470614766"
+        timestamp="3920366525961"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/home/adicool/AndroidStudioProjects/IDscan/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="5050739515044"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/home/leprechaun/AndroidStudioProjects/Idscan/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
+            location="/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
             type="DEX" />
+    </build>
+    <build
+        timestamp="6068097124919"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
+            type="RESOURCES" />
     </build>
 
 </instant-run>
