@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
@@ -28,16 +29,39 @@ public class DetailActivity extends AppCompatActivity {
     String barcode_scan;
     private Request request;
     String responseString;
+    SessionManager session;
+    TextView EventIdName;
+    TextView Email;
+    TextView Event;
+    TextView Contact_number;
+    Button logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+        session=new SessionManager(DetailActivity.this);
         scan = (Button)findViewById(R.id.Scan);
+        EventIdName=(TextView) findViewById(R.id.head_name);
+        Email=(TextView) findViewById(R.id.head_email);
+        Event=(TextView) findViewById(R.id.event_name);
+        Contact_number=(TextView) findViewById(R.id.head_contact);
+        logout=(Button)findViewById(R.id.logout_id);
+        EventIdName.setText(session.getName());
+        Email.setText(session.getEmail());
+        Event.setText(session.getEventName());
+        Contact_number.setText(session.getContact());
         scan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 scan();
+            }
+        });
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DetailActivity.this,MainActivity.class));
+
             }
         });
     }

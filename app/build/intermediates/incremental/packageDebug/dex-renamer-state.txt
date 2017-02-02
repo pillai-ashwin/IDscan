@@ -1,4 +1,4 @@
-#Sun Jan 29 15:23:31 IST 2017
+#Thu Feb 02 13:45:34 IST 2017
 base.0=/Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
 file.0=/Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

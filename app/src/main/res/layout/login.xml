@@ -1,25 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
     android:padding="16dp">
 
     <EditText
         android:id="@+id/username"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:layout_above="@+id/password"
         android:hint="username"/>
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+
         android:hint="password"/>
+
     <Button
         android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:gravity="center_horizontal"
         android:text="LOGIN"
-        />
+        android:layout_below="@+id/password"
+        android:layout_centerHorizontal="true" />
 
-</LinearLayout>
+</RelativeLayout>

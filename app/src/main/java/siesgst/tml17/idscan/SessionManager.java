@@ -29,6 +29,11 @@ public class SessionManager {
     // All Shared Preferences Keys
     private static final String IS_LOGIN = "IsLoggedIn";
 
+    private static final String EVENT = "event";
+
+    private static final String PHONECONTACT = "phcontact";
+
+
     // User name (make variable public to access from outside)
     public static final String KEY_NAME = "username";
 
@@ -45,7 +50,7 @@ public class SessionManager {
     /**
      * Create login session
      * */
-    public void createLoginSession(String name, String email){
+    public void createLoginSession(String name, String email,String event,String ph_contact){
         // Storing login value as TRUE
         editor.putBoolean(IS_LOGIN, true);
 
@@ -55,8 +60,13 @@ public class SessionManager {
         // Storing email in pref
         editor.putString(KEY_EMAIL, email);
 
+        editor.putString(EVENT,event);
+
+        editor.putString(PHONECONTACT,ph_contact);
+
+
         // commit changes
-        editor.commit();
+        editor.apply();
     }
 
     /**
@@ -125,4 +135,14 @@ public class SessionManager {
     public boolean isLoggedIn(){
         return pref.getBoolean(IS_LOGIN, false);
     }
+
+    public String getName(){return pref.getString(KEY_NAME," ");}
+
+    public String getEmail(){return pref.getString(KEY_EMAIL," ");}
+
+    public String getEventName(){return pref.getString(EVENT," ");}
+
+    public String getContact(){return pref.getString(PHONECONTACT," ");}
+
+
 }

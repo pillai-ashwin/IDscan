@@ -30,7 +30,7 @@ import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
     String barcode_scan;
-    SessionManager sessionManager;
+    SessionManager session;
     EditText username,password;
     Button login;
     private Request request;
@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.login);
         //scan();
         //android.base64.encode(NO_WARP);
+        session=new SessionManager(MainActivity.this);
         Login_try();
     }
 
@@ -90,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
 
 //                if(username.getText().toString().equals("a")){
 
-                    progressDialog.setCancelable(false);
+                    progressDialog.setCancelable(true);
                     progressDialog.setMessage("Loading...");
                     Log.v("prog?","prog.");
                     progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
@@ -114,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
                 client.newCall(request).enqueue(new Callback() {
                     @Override
                     public void onFailure(Call call, IOException e) {
+                        Log.d("Nigga","Fail");
                         e.printStackTrace();
                     }
 
@@ -125,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
 
                             JSONObject root = null;
                             try {
+                                Log.d("Nigga","response");
                                 root = new JSONObject(responseString);
                                 String status = root.optString("status");
                                 String message = root.optString("message");
@@ -135,12 +138,14 @@ public class MainActivity extends AppCompatActivity {
                                     String id = resultArrayObject.optString("id");
                                     String fname = resultArrayObject.optString("fname");
                                     String lname = resultArrayObject.optString("lname");
+
                                     String email = resultArrayObject.optString("email");
                                     String contact = resultArrayObject.optString("contact");
                                     event_id = resultArrayObject.optString("event_id");
                                     String event_name = resultArrayObject.optString("event_name");
                                     String created = resultArrayObject.optString("created_at");
                                     String updated = resultArrayObject.optString("updated_at");
+                                    session.createLoginSession(fname+"  "+lname,email,event_name,contact);
                                     //Long created_at = Long.parseLong(created);
                                     //Long updated_at = Long.parseLong(updated);
                                 }
