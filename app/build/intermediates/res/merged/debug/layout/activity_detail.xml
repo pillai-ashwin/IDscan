@@ -54,6 +54,9 @@
         android:text="Scan"
         android:textSize="30sp"
         android:id="@+id/Scan"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/button"
+        android:elevation="10dp"
         android:layout_gravity="center_horizontal"
         android:layout_centerInParent="true"/>
 
@@ -61,6 +64,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Log out"
+        android:layout_gravity="center_horizontal"
         android:id="@+id/logout_id"/>
+
+    <TextView
+        android:paddingTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:id="@+id/manual_addition"
+        android:layout_gravity="center_horizontal"
+
+        android:text="Add Manually"/>
+
 
 </LinearLayout>

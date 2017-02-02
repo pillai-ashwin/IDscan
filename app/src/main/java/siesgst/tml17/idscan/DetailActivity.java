@@ -1,12 +1,16 @@
 package siesgst.tml17.idscan;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,6 +39,7 @@ public class DetailActivity extends AppCompatActivity {
     TextView Event;
     TextView Contact_number;
     Button logout;
+    TextView add;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +52,7 @@ public class DetailActivity extends AppCompatActivity {
         Event=(TextView) findViewById(R.id.event_name);
         Contact_number=(TextView) findViewById(R.id.head_contact);
         logout=(Button)findViewById(R.id.logout_id);
+        add=(TextView)findViewById(R.id.manual_addition);
         EventIdName.setText(session.getName());
         Email.setText(session.getEmail());
         Event.setText(session.getEventName());
@@ -62,6 +68,37 @@ public class DetailActivity extends AppCompatActivity {
             public void onClick(View view) {
                 startActivity(new Intent(DetailActivity.this,MainActivity.class));
 
+            }
+        });
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(DetailActivity.this);
+                builder.setTitle("Input PRN");
+
+                // Set up the input
+                final EditText input = new EditText(DetailActivity.this);
+                // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+                input.setInputType(InputType.TYPE_CLASS_TEXT );
+                builder.setView(input);
+
+                // Set up the buttons
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        barcode_scan = input.getText().toString();
+                        Toast.makeText(DetailActivity.this, "Input="+barcode_scan, Toast.LENGTH_LONG).show();
+
+                    }
+                });
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+
+                builder.show();
             }
         });
     }

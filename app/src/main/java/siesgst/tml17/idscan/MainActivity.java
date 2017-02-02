@@ -89,10 +89,14 @@ public class MainActivity extends AppCompatActivity {
                // Post post = new Post(username.getText().toString(),password.getText().toString());
                 //String response = post.postToDb();
 
-//                if(username.getText().toString().equals("a")){
+                  if(username.getText().toString().equalsIgnoreCase("a")) {
+                      progressDialog.dismiss();
+                      Intent intent = new Intent(MainActivity.this,DetailActivity.class);
+                      startActivity(intent);
+                  }
 
                     progressDialog.setCancelable(true);
-                    progressDialog.setMessage("Loading...");
+                    progressDialog.setMessage("Signing In...");
                     Log.v("prog?","prog.");
                     progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
                     progressDialog.show();
