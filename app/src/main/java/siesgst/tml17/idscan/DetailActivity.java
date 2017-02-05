@@ -17,6 +17,8 @@ import android.widget.Toast;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
+import org.json.JSONObject;
+
 import java.io.IOException;
 
 import okhttp3.Call;
@@ -75,20 +77,18 @@ public class DetailActivity extends AppCompatActivity {
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(DetailActivity.this);
                 builder.setTitle("Input PRN");
-
                 // Set up the input
                 final EditText input = new EditText(DetailActivity.this);
                 // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
                 input.setInputType(InputType.TYPE_CLASS_TEXT );
                 builder.setView(input);
-
                 // Set up the buttons
                 builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         barcode_scan = input.getText().toString();
                         Toast.makeText(DetailActivity.this, "Input="+barcode_scan, Toast.LENGTH_LONG).show();
-
+                        play(barcode_scan);
                     }
                 });
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -97,7 +97,6 @@ public class DetailActivity extends AppCompatActivity {
                         dialog.cancel();
                     }
                 });
-
                 builder.show();
             }
         });
@@ -125,73 +124,53 @@ public class DetailActivity extends AppCompatActivity {
                 Log.d("MainActivity", "Scanned");
                 barcode_scan = result.getContents();
                 Toast.makeText(this, "Scanned: " + barcode_scan, Toast.LENGTH_LONG).show();
-
-
-
-                    Intent intent = getIntent();
-                    String id1 = intent.getStringExtra("id");
-
-
-                String url = "http://192.168.43.221/play.php";
-                OkHttpClient client = new OkHttpClient();
-
-                RequestBody body = new FormBody.Builder()
-                        .add("prn", barcode_scan)
-                        .add("event_id", id1)
-                        .build();
-                request = new Request.Builder()
-                        .url(url)
-                        .method("POST", body.create(null, new byte[0]))
-                        .post(body)
-                        .build();
-
-                client.newCall(request).enqueue(new Callback() {
-                    @Override
-                    public void onFailure(Call call, IOException e) {
-                        e.printStackTrace();
-                    }
-
-                    @Override
-                    public void onResponse(Call call, Response response) throws IOException {
-                        responseString = response.body().string();
-                        Log.v("response", responseString);
-//                        if (responseString.contains("true")) {
-
-                            //JSONObject root = null;
-                            /*try {
-                                root = new JSONObject(responseString);
-                                String status = root.optString("status");
-                                String message = root.optString("message");
-                                JSONArray result = root.optJSONArray("result");
-                                for(int i=0;i<result.length();i++)
-                                {
-                                    JSONObject resultArrayObject = result.optJSONObject(i);
-                                    String id = resultArrayObject.optString("id");
-                                    String fname = resultArrayObject.optString("fname");
-                                    String lname = resultArrayObject.optString("lname");
-                                    String email = resultArrayObject.optString("email");
-                                    String contact = resultArrayObject.optString("contact");
-                                    event_id = resultArrayObject.optString("event_id");
-                                    String event_name = resultArrayObject.optString("event_name");
-                                    String created = resultArrayObject.optString("created_at");
-                                    String updated = resultArrayObject.optString("updated_at");
-                                    //Long created_at = Long.parseLong(created);
-                                    //Long updated_at = Long.parseLong(updated);
-                                }
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }*/
-                            //Intent intent = new Intent(MainActivity.this,DetailActivity.class);
-//                            intent.putExtra("id",event_id);
-//                            startActivity(intent);
-//                            progressDialog.dismiss();
-                            scan();
-                        }
-                    });
-        }
+                play(barcode_scan);
             }
-    }
-//        } else {
-            //to pass result to the fragment
-            //super.onActivityResult(requestCode, resultCode, data);
         }
+    }
+    public void play(String prn)
+    {
+        Intent intent = getIntent();
+        String id1 = intent.getStringExtra("id");
+        String url = "http://192.168.1.35/play.php";
+        OkHttpClient client = new OkHttpClient();
+        RequestBody body = new FormBody.Builder()
+                .add("prn", prn)
+                .add("event_id", id1)
+                .build();
+        request = new Request.Builder()
+                .url(url)
+                .method("POST", body.create(null, new byte[0]))
+                .post(body)
+                .build();
+        Log.v("url",body.toString());
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                e.printStackTrace();
+            }
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                responseString = response.body().string();
+                Log.v("response", responseString);
+                try {
+                    JSONObject root = new JSONObject(responseString);
+                    String status = root.optString("status");
+                    String message = root.optString("message");
+                    if(responseString.contains("play"))
+                    {
+                        Toast.makeText(getApplicationContext(),"Can play",Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        Toast.makeText(getApplicationContext(),"Cannot play / already played",Toast.LENGTH_SHORT).show();
+                    }
+                }
+                catch(Exception e)
+                {
+                    e.printStackTrace();
+                }
+                scan();
+            }
+        });
+    }
+}

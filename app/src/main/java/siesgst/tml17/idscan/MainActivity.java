@@ -59,9 +59,6 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("MainActivity", "Scanned");
                 barcode_scan = result.getContents();
                 Toast.makeText(this, "Scanned: " + barcode_scan, Toast.LENGTH_LONG).show();
-
-
-
             }
 
         } else {
@@ -85,25 +82,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 final ProgressDialog progressDialog = new ProgressDialog(MainActivity.this);
-
-               // Post post = new Post(username.getText().toString(),password.getText().toString());
-                //String response = post.postToDb();
-
-                  if(username.getText().toString().equalsIgnoreCase("a")) {
-                      progressDialog.dismiss();
-                      Intent intent = new Intent(MainActivity.this,DetailActivity.class);
-                      startActivity(intent);
-                  }
-
-                    progressDialog.setCancelable(true);
-                    progressDialog.setMessage("Signing In...");
-                    Log.v("prog?","prog.");
-                    progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-                    progressDialog.show();
-                    //progressDialog.dismiss();
-                    //scan();
-//                }
-                String url = "http://192.168.43.221/login.php";
+                progressDialog.setCancelable(true);
+                progressDialog.setMessage("Signing In...");
+                Log.v("prog?","prog.");
+                progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                progressDialog.show();
+                String url = "http://192.168.1.35/login.php";
                 OkHttpClient client = new OkHttpClient();
 
                 RequestBody body = new FormBody.Builder()
@@ -115,20 +99,18 @@ public class MainActivity extends AppCompatActivity {
                         .method("POST", body.create(null, new byte[0]))
                         .post(body)
                         .build();
-
+                Log.v("login",body.toString());
                 client.newCall(request).enqueue(new Callback() {
                     @Override
                     public void onFailure(Call call, IOException e) {
                         Log.d("Nigga","Fail");
                         e.printStackTrace();
                     }
-
                     @Override
                     public void onResponse(Call call, Response response) throws IOException {
                         responseString = response.body().string();
                         Log.v("response", responseString);
                         if (responseString.contains("true")) {
-
                             JSONObject root = null;
                             try {
                                 Log.d("Nigga","response");

@@ -1,6 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\HP\\Desktop\\IDscan-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher.png",
-        "source": "C:\\Users\\HP\\Desktop\\IDscan-master\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\HP\\Desktop\\IDscan-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher.png",
+        "source": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\HP\\Desktop\\IDscan-master\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher.png",
+        "source": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     }
 ]
