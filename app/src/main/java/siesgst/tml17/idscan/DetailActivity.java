@@ -169,7 +169,7 @@ public class DetailActivity extends AppCompatActivity {
                 {
                     e.printStackTrace();
                 }
-                scan();
+                //scan();
             }
         });
     }
