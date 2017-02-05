@@ -157,12 +157,12 @@ public class DetailActivity extends AppCompatActivity {
                     JSONObject root = new JSONObject(responseString);
                     String status = root.optString("status");
                     String message = root.optString("message");
-                    if(responseString.contains("play"))
+                    if(message.equalsIgnoreCase("play"))
                     {
-                        Toast.makeText(getApplicationContext(),"Can play",Toast.LENGTH_SHORT).show();
+                        Log.v("tag","Can play");
                     }
                     else{
-                        Toast.makeText(getApplicationContext(),"Cannot play / already played",Toast.LENGTH_SHORT).show();
+                        Log.v("tag","Cannot play");
                     }
                 }
                 catch(Exception e)
