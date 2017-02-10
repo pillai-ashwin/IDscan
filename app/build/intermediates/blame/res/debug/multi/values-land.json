@@ -1,6 +1,10 @@
 [
     {
+<<<<<<< HEAD
+        "outputFile": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+=======
         "outputFile": "C:\\Users\\rohitramaswamy\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
         "map": [
             {
                 "to": {
@@ -11,7 +15,11 @@
                     "endOffset": 120
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-land/values-land.xml",
+=======
                     "file": "C:\\Users\\rohitramaswamy\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-land\\values-land.xml",
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -30,7 +38,11 @@
                     "endOffset": 184
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-land/values-land.xml",
+=======
                     "file": "C:\\Users\\rohitramaswamy\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-land\\values-land.xml",
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -49,7 +61,11 @@
                     "endOffset": 255
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-land/values-land.xml",
+=======
                     "file": "C:\\Users\\rohitramaswamy\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-land\\values-land.xml",
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -68,7 +84,11 @@
                     "endOffset": 323
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-land/values-land.xml",
+=======
                     "file": "C:\\Users\\rohitramaswamy\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-land\\values-land.xml",
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -77,26 +97,40 @@
                         "endOffset": 323
                     }
                 }
+<<<<<<< HEAD
+            },
+=======
             }
         ]
     },
     {
         "outputFile": "C:\\Users\\rohitramaswamy\\AndroidStudioProjects\\IDscan\\C:\\Users\\HP\\Desktop\\IDscan-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
         "map": [
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
             {
                 "to": {
-                    "startLine": 2,
+                    "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 69,
-                    "endOffset": 120
+                    "startOffset": 328,
+                    "endLine": 9,
+                    "endColumn": 12,
+                    "endOffset": 505
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/res/values-land/values-land.xml",
+=======
                     "file": "C:\\Users\\rohitramaswamy\\AndroidStudioProjects\\IDscan\\C:\\Users\\HP\\Desktop\\IDscan-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-land\\values-land.xml",
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
                         "startOffset": 55,
+<<<<<<< HEAD
+                        "endLine": 5,
+                        "endColumn": 12,
+                        "endOffset": 232
+=======
                         "endColumn": 69,
                         "endOffset": 120
                     }
@@ -237,6 +271,7 @@
                         "startOffset": 260,
                         "endColumn": 67,
                         "endOffset": 323
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
                     }
                 }
             }

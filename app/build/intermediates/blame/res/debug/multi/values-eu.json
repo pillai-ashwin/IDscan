@@ -1,6 +1,10 @@
 [
     {
+<<<<<<< HEAD
+        "outputFile": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-eu/values-eu.xml",
+=======
         "outputFile": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-eu\\values-eu.xml",
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
         "map": [
             {
                 "to": {
@@ -11,7 +15,11 @@
                     "endOffset": 114
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/res/values-eu/values-eu.xml",
+=======
                     "file": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.journeyapps\\zxing-android-embedded\\3.2.0\\res\\values-eu\\values-eu.xml",
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -30,7 +38,11 @@
                     "endOffset": 163
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/res/values-eu/values-eu.xml",
+=======
                     "file": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.journeyapps\\zxing-android-embedded\\3.2.0\\res\\values-eu\\values-eu.xml",
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -49,7 +61,11 @@
                     "endOffset": 311
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/res/values-eu/values-eu.xml",
+=======
                     "file": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.journeyapps\\zxing-android-embedded\\3.2.0\\res\\values-eu\\values-eu.xml",
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -68,6 +84,9 @@
                     "endOffset": 423
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/res/values-eu/values-eu.xml",
+=======
                     "file": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.journeyapps\\zxing-android-embedded\\3.2.0\\res\\values-eu\\values-eu.xml",
                     "position": {
                         "startLine": 5,
@@ -231,6 +250,7 @@
                 },
                 "from": {
                     "file": "C:\\Users\\rohitramaswamy\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.journeyapps\\zxing-android-embedded\\3.2.0\\res\\values-eu\\values-eu.xml",
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,

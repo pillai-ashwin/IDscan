@@ -1,6 +1,10 @@
 [
     {
+<<<<<<< HEAD
+        "outputFile": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
+=======
         "outputFile": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
         "map": [
             {
                 "to": {
@@ -11,6 +15,9 @@
                     "endOffset": 96
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support.test/rules/0.5/res/values/values.xml",
+=======
                     "file": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support.test\\rules\\0.5\\res\\values\\values.xml",
                     "position": {
                         "startLine": 4,
@@ -60,6 +67,7 @@
                 },
                 "from": {
                     "file": "C:\\Users\\rohitramaswamy\\AndroidStudioProjects\\IDscan\\C:\\Users\\HP\\Desktop\\IDscan-master\\app\\build\\intermediates\\exploded-aar\\com.android.support.test\\rules\\0.5\\res\\values\\values.xml",
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
