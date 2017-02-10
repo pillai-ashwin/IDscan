@@ -131,8 +131,8 @@ public class DetailActivity extends AppCompatActivity {
     public void play(String prn)
     {
         Intent intent = getIntent();
-        String id1 = intent.getStringExtra("id");
-        String url = "http://192.168.1.35/play.php";
+        String id1 = session.getID();
+        String url = "http://192.168.43.10/play.php";
         OkHttpClient client = new OkHttpClient();
         RequestBody body = new FormBody.Builder()
                 .add("prn", prn)

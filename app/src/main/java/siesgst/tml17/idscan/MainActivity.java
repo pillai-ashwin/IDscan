@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.v("prog?","prog.");
                 progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
                 progressDialog.show();
-                String url = "http://192.168.1.35/login.php";
+                String url = "http://192.168.43.10/login.php";
                 OkHttpClient client = new OkHttpClient();
 
                 RequestBody body = new FormBody.Builder()
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
                                     String event_name = resultArrayObject.optString("event_name");
                                     String created = resultArrayObject.optString("created_at");
                                     String updated = resultArrayObject.optString("updated_at");
-                                    session.createLoginSession(fname+"  "+lname,email,event_name,contact);
+                                    session.createLoginSession(fname+"  "+lname,email,event_name,contact,id);
                                     //Long created_at = Long.parseLong(created);
                                     //Long updated_at = Long.parseLong(updated);
                                 }
