@@ -49,6 +49,13 @@
             </intent-filter>
         </activity>
         <activity
+<<<<<<< HEAD
+=======
+            android:name="siesgst.tml17.idscan.DetailActivity"
+            android:label="@string/title_activity_detail"
+            android:theme="@style/AppTheme" />
+        <activity
+>>>>>>> 14d3e7649e8c2863a316930170397491aebc9a80
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:clearTaskOnLaunch="true"
             android:screenOrientation="sensorLandscape"

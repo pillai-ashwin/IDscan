@@ -1,7 +1,24 @@
 [
     {
+<<<<<<< HEAD
         "merged": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png",
         "source": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
+=======
+<<<<<<< HEAD
+        "merged": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/merged/debug/drawable-ldrtl-hdpi-v17/abc_ic_menu_cut_mtrl_alpha.png",
+        "source": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/drawable-ldrtl-hdpi-v17/abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/merged/debug/drawable-ldrtl-hdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/drawable-ldrtl-hdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/merged/debug/drawable-ldrtl-hdpi-v17/abc_spinner_mtrl_am_alpha.9.png",
+        "source": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/drawable-ldrtl-hdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
+=======
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
+>>>>>>> 14d3e7649e8c2863a316930170397491aebc9a80
     },
     {
         "merged": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png",
@@ -32,6 +49,7 @@
         "source": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable-ldrtl-hdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\rohitramaswamy\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17\\abc_spinner_mtrl_am_alpha.9.png",
         "source": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\rohitramaswamy\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-ldrtl-hdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
     },
@@ -46,5 +64,10 @@
     {
         "merged": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\rohitramaswamy\\AndroidStudioProjects\\IDscan\\C:\\Users\\HP\\Desktop\\IDscan-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png",
         "source": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\rohitramaswamy\\AndroidStudioProjects\\IDscan\\C:\\Users\\HP\\Desktop\\IDscan-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png"
+=======
+        "merged": "C:\\Users\\rohitramaswamy\\AndroidStudioProjects\\IDscan\\C:\\Users\\HP\\Desktop\\IDscan-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "C:\\Users\\rohitramaswamy\\AndroidStudioProjects\\IDscan\\C:\\Users\\HP\\Desktop\\IDscan-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
+>>>>>>> 14d3e7649e8c2863a316930170397491aebc9a80
     }
 ]

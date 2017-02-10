@@ -87,7 +87,15 @@ public class MainActivity extends AppCompatActivity {
                 Log.v("prog?","prog.");
                 progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
                 progressDialog.show();
+<<<<<<< HEAD
+                String url = "http://192.168.43.221/login.php";
+                if(username.getText().toString().equals("a")&&password.getText().toString().equals("a")){
+                    startActivity(new Intent(MainActivity.this,DetailActivity.class));
+
+                }
+=======
                 String url = "http://192.168.43.10/login.php";
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
                 OkHttpClient client = new OkHttpClient();
 
                 RequestBody body = new FormBody.Builder()

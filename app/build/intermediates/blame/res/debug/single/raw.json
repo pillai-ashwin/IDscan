@@ -1,18 +1,33 @@
 [
     {
+<<<<<<< HEAD
         "merged": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\res\\merged\\debug\\raw\\zxing_beep.ogg",
         "source": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.journeyapps\\zxing-android-embedded\\3.2.0\\res\\raw\\zxing_beep.ogg"
+=======
+<<<<<<< HEAD
+        "merged": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/merged/debug/raw/zxing_beep.ogg",
+        "source": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/res/raw/zxing_beep.ogg"
+=======
+        "merged": "C:\\Users\\rohitramaswamy\\AndroidStudioProjects\\IDscan\\C:\\Users\\HP\\Desktop\\IDscan-master\\app\\build\\intermediates\\res\\merged\\debug\\raw\\zxing_beep.ogg",
+        "source": "C:\\Users\\rohitramaswamy\\AndroidStudioProjects\\IDscan\\C:\\Users\\HP\\Desktop\\IDscan-master\\app\\build\\intermediates\\exploded-aar\\com.journeyapps\\zxing-android-embedded\\3.2.0\\res\\raw\\zxing_beep.ogg"
+>>>>>>> 14d3e7649e8c2863a316930170397491aebc9a80
     },
     {
         "merged": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\rohitramaswamy\\AndroidStudioProjects\\IDscan\\C:\\Users\\HP\\Desktop\\IDscan-master\\app\\build\\intermediates\\res\\merged\\debug\\raw\\zxing_beep.ogg",
         "source": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\rohitramaswamy\\AndroidStudioProjects\\IDscan\\C:\\Users\\HP\\Desktop\\IDscan-master\\app\\build\\intermediates\\exploded-aar\\com.journeyapps\\zxing-android-embedded\\3.2.0\\res\\raw\\zxing_beep.ogg"
     },
     {
+<<<<<<< HEAD
         "merged": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/build/intermediates/res/merged/debug/raw/zxing_beep.ogg",
         "source": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/res/raw/zxing_beep.ogg"
     },
     {
         "merged": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\rohitramaswamy\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\res\\merged\\debug\\raw\\zxing_beep.ogg",
         "source": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\rohitramaswamy\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.journeyapps\\zxing-android-embedded\\3.2.0\\res\\raw\\zxing_beep.ogg"
+=======
+        "merged": "C:\\Users\\rohitramaswamy\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\res\\merged\\debug\\raw\\zxing_beep.ogg",
+        "source": "C:\\Users\\rohitramaswamy\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.journeyapps\\zxing-android-embedded\\3.2.0\\res\\raw\\zxing_beep.ogg"
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
+>>>>>>> 14d3e7649e8c2863a316930170397491aebc9a80
     }
 ]

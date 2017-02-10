@@ -1,6 +1,14 @@
 [
     {
+<<<<<<< HEAD
         "outputFile": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
+=======
+<<<<<<< HEAD
+        "outputFile": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v14/values-v14.xml",
+=======
+        "outputFile": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
+>>>>>>> 14d3e7649e8c2863a316930170397491aebc9a80
         "map": [
             {
                 "to": {
@@ -12,7 +20,15 @@
                     "endOffset": 326
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-v14\\values-v14.xml",
+=======
+<<<<<<< HEAD
+                    "file": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-v14/values-v14.xml",
+=======
+                    "file": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-v14\\values-v14.xml",
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
+>>>>>>> 14d3e7649e8c2863a316930170397491aebc9a80
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -32,7 +48,15 @@
                     "endOffset": 397
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-v14\\values-v14.xml",
+=======
+<<<<<<< HEAD
+                    "file": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-v14/values-v14.xml",
+=======
+                    "file": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-v14\\values-v14.xml",
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
+>>>>>>> 14d3e7649e8c2863a316930170397491aebc9a80
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -51,7 +75,15 @@
                     "endOffset": 480
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-v14\\values-v14.xml",
+=======
+<<<<<<< HEAD
+                    "file": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-v14/values-v14.xml",
+=======
+                    "file": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-v14\\values-v14.xml",
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
+>>>>>>> 14d3e7649e8c2863a316930170397491aebc9a80
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -71,7 +103,15 @@
                     "endOffset": 890
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-v14\\values-v14.xml",
+=======
+<<<<<<< HEAD
+                    "file": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-v14/values-v14.xml",
+=======
+                    "file": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-v14\\values-v14.xml",
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
+>>>>>>> 14d3e7649e8c2863a316930170397491aebc9a80
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -92,7 +132,15 @@
                     "endOffset": 1312
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-v14\\values-v14.xml",
+=======
+<<<<<<< HEAD
+                    "file": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-v14/values-v14.xml",
+=======
+                    "file": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-v14\\values-v14.xml",
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
+>>>>>>> 14d3e7649e8c2863a316930170397491aebc9a80
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -112,7 +160,15 @@
                     "endOffset": 1432
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-v14\\values-v14.xml",
+=======
+<<<<<<< HEAD
+                    "file": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-v14/values-v14.xml",
+=======
+                    "file": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-v14\\values-v14.xml",
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
+>>>>>>> 14d3e7649e8c2863a316930170397491aebc9a80
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -131,7 +187,15 @@
                     "endOffset": 1564
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-v14\\values-v14.xml",
+=======
+<<<<<<< HEAD
+                    "file": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-v14/values-v14.xml",
+=======
+                    "file": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-v14\\values-v14.xml",
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
+>>>>>>> 14d3e7649e8c2863a316930170397491aebc9a80
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
@@ -150,7 +214,15 @@
                     "endOffset": 1684
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-v14\\values-v14.xml",
+=======
+<<<<<<< HEAD
+                    "file": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-v14/values-v14.xml",
+=======
+                    "file": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-v14\\values-v14.xml",
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
+>>>>>>> 14d3e7649e8c2863a316930170397491aebc9a80
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,
@@ -169,7 +241,15 @@
                     "endOffset": 1747
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-v14\\values-v14.xml",
+=======
+<<<<<<< HEAD
+                    "file": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-v14/values-v14.xml",
+=======
+                    "file": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-v14\\values-v14.xml",
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
+>>>>>>> 14d3e7649e8c2863a316930170397491aebc9a80
                     "position": {
                         "startLine": 24,
                         "startColumn": 4,
@@ -189,7 +269,15 @@
                     "endOffset": 1901
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-v14\\values-v14.xml",
+=======
+<<<<<<< HEAD
+                    "file": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-v14/values-v14.xml",
+=======
+                    "file": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-v14\\values-v14.xml",
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
+>>>>>>> 14d3e7649e8c2863a316930170397491aebc9a80
                     "position": {
                         "startLine": 25,
                         "startColumn": 4,
@@ -209,7 +297,15 @@
                     "endOffset": 1964
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-v14\\values-v14.xml",
+=======
+<<<<<<< HEAD
+                    "file": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-v14/values-v14.xml",
+=======
+                    "file": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-v14\\values-v14.xml",
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
+>>>>>>> 14d3e7649e8c2863a316930170397491aebc9a80
                     "position": {
                         "startLine": 28,
                         "startColumn": 4,
@@ -228,7 +324,14 @@
                     "endOffset": 2096
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-v14\\values-v14.xml",
+=======
+<<<<<<< HEAD
+                    "file": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-v14/values-v14.xml",
+=======
+                    "file": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-v14\\values-v14.xml",
+>>>>>>> 14d3e7649e8c2863a316930170397491aebc9a80
                     "position": {
                         "startLine": 29,
                         "startColumn": 4,
@@ -710,6 +813,7 @@
                     "endOffset": 2096
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/C:\\Users\\rohitramaswamy\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-v14\\values-v14.xml",
                     "position": {
                         "startLine": 29,
@@ -952,6 +1056,10 @@
                 },
                 "from": {
                     "file": "/Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-v14/values-v14.xml",
+=======
+                    "file": "C:\\Users\\rohitramaswamy\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\values-v14\\values-v14.xml",
+>>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
+>>>>>>> 14d3e7649e8c2863a316930170397491aebc9a80
                     "position": {
                         "startLine": 29,
                         "startColumn": 4,
