@@ -1,18 +1,4 @@
-<<<<<<< HEAD
-#Fri Feb 10 14:01:26 IST 2017
-base.0=/Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
-renamed.0=classes.dex
-file.0=/Users/rohitramaswamy/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
-=======
-<<<<<<< HEAD
-#Fri Feb 10 13:39:46 IST 2017
-base.0=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
-renamed.0=classes.dex
-file.0=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
-=======
-#Fri Feb 10 11:51:11 IST 2017
+#Fri Feb 10 23:23:03 IST 2017
 base.0=C\:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
 file.0=C\:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
->>>>>>> d9351666d2af81ce92196fd3a15cc3ad0f5092ab
->>>>>>> 14d3e7649e8c2863a316930170397491aebc9a80

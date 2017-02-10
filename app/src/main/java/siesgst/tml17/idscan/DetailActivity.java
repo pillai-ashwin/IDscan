@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.text.InputType;
 import android.util.Log;
 import android.view.Menu;
@@ -21,6 +23,8 @@ import com.google.zxing.integration.android.IntentResult;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -36,12 +40,17 @@ public class DetailActivity extends AppCompatActivity {
     private Request request;
     String responseString;
     SessionManager session;
+    List<Player> player=new ArrayList<Player>();
+    RecyclerViewAdapter adapter;
     TextView EventIdName;
     TextView Email;
     TextView Event;
     TextView Contact_number;
     Button logout;
     TextView add;
+    RecyclerView rv;
+    List<Player>a;
+    StringBuffer sb=new StringBuffer();
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -53,7 +62,7 @@ public class DetailActivity extends AppCompatActivity {
         if (id == R.id.action_scan) {
             //Toast.makeText(DetailActivity.this,"Scan", Toast.LENGTH_SHORT).show();
             scan();
-            play(barcode_scan);
+          //  play(barcode_scan);
             return true;
         }
         else if (id == R.id.action_manually) {
@@ -71,7 +80,7 @@ public class DetailActivity extends AppCompatActivity {
                 public void onClick(DialogInterface dialog, int which) {
                     barcode_scan = input.getText().toString();
                     Toast.makeText(DetailActivity.this, "Input="+barcode_scan, Toast.LENGTH_LONG).show();
-                    play(barcode_scan);
+                  //  play(barcode_scan);
                 }
             });
             builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -85,32 +94,19 @@ public class DetailActivity extends AppCompatActivity {
         }
 
         else if(id==R.id.update_manually){
-            Log.d("add manually","in");
-            AlertDialog.Builder builder = new AlertDialog.Builder(DetailActivity.this);
-            builder.setTitle("Input PRN");
-            // Set up the input
-            final EditText input = new EditText(DetailActivity.this);
-            // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
-            input.setInputType(InputType.TYPE_CLASS_TEXT );
-            builder.setView(input);
-            // Set up the buttons
-            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    barcode_scan = input.getText().toString();
-                    Toast.makeText(DetailActivity.this, "Input="+barcode_scan, Toast.LENGTH_LONG).show();
-                    UIDupdate(barcode_scan);
+
+                a=adapter.getselectedList();
+                for(int i=0;i<a.size();i++ ){
+                    sb.append(a.get(i).getUID());
+                    sb.append("\n");
                 }
-            });
-            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    dialog.cancel();
-                }
-            });
-            builder.show();
+                Toast.makeText(DetailActivity.this, sb, Toast.LENGTH_SHORT).show();
+
             return true;
 
+        }
+        else if(id==R.id.log_out_menu){
+            session.logoutUser(DetailActivity.this);
         }
         return super.onOptionsItemSelected(item);
     }
@@ -125,6 +121,14 @@ public class DetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_detail);
+        session=new SessionManager(DetailActivity.this);
+        rv= (RecyclerView)findViewById(R.id.rv);
+        init();
+        rv.setLayoutManager(new LinearLayoutManager(DetailActivity.this));
+
+        adapter=new RecyclerViewAdapter(DetailActivity.this,player);
+        rv.setAdapter(adapter);
+
 
 
 
@@ -152,7 +156,7 @@ public class DetailActivity extends AppCompatActivity {
                 Log.d("MainActivity", "Scanned");
                 barcode_scan = result.getContents();
                 Toast.makeText(this, "Scanned: " + barcode_scan, Toast.LENGTH_LONG).show();
-                play(barcode_scan);
+               // play(barcode_scan);
             }
         }
     }
@@ -246,6 +250,39 @@ public class DetailActivity extends AppCompatActivity {
                 //scan();
             }
         });
+    }
+
+    void init(){
+        player= new ArrayList<Player>();
+        player.add(new Player("115A1067","Aditya Nair","12:58","9987884770"));
+        player.add(new Player("115A1061","Aditya Kulakarni","13:10","8767459127"));
+        player.add(new Player("115A1077","Omkar Prabhu","15:07","9967721999"));
+        player.add(new Player("115A1067","Aditya Nair","12:58","9987884770"));
+        player.add(new Player("115A1061","Aditya Kulakarni","13:10","8767459127"));
+        player.add(new Player("115A1077","Omkar Prabhu","15:07","9967721999"));
+        player.add(new Player("115A1067","Aditya Nair","12:58","9987884770"));
+        player.add(new Player("115A1061","Aditya Kulakarni","13:10","8767459127"));
+        player.add(new Player("115A1077","Omkar Prabhu","15:07","9967721999"));
+        player.add(new Player("115A1067","Aditya Nair","12:58","9987884770"));
+        player.add(new Player("115A1061","Aditya Kulakarni","13:10","8767459127"));
+        player.add(new Player("115A1077","Omkar Prabhu","15:07","9967721999"));
+        player.add(new Player("115A1067","Aditya Nair","12:58","9987884770"));
+        player.add(new Player("115A1061","Aditya Kulakarni","13:10","8767459127"));
+        player.add(new Player("115A1077","Omkar Prabhu","15:07","9967721999"));
+        player.add(new Player("115A1067","Aditya Nair","12:58","9987884770"));
+        player.add(new Player("115A1061","Aditya Kulakarni","13:10","8767459127"));
+        player.add(new Player("115A1077","Omkar Prabhu","15:07","9967721999"));
+        player.add(new Player("115A1067","Aditya Nair","12:58","9987884770"));
+        player.add(new Player("115A1061","Aditya Kulakarni","13:10","8767459127"));
+        player.add(new Player("115A1077","Omkar Prabhu","15:07","9967721999"));
+        player.add(new Player("115A1067","Aditya Nair","12:58","9987884770"));
+        player.add(new Player("115A1061","Aditya Kulakarni","13:10","8767459127"));
+        player.add(new Player("115A1077","Omkar Prabhu","15:07","9967721999"));
+        player.add(new Player("115A1067","Aditya Nair","12:58","9987884770"));
+        player.add(new Player("115A1061","Aditya Kulakarni","13:10","8767459127"));
+        player.add(new Player("115A1077","Omkar Prabhu","15:07","9967721999"));
+
+
     }
 }
 /*

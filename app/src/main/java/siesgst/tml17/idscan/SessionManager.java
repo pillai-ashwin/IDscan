@@ -27,7 +27,7 @@ public class SessionManager {
     private static final String PREF_NAME = "MyPreferences";
 
     // All Shared Preferences Keys
-    private static final String IS_LOGIN = "IsLoggedIn";
+    private static final String IS_LOGIN = "true";
 
     private static final String EVENT = "event";
 
@@ -118,13 +118,13 @@ public class SessionManager {
     /**
      * Clear session details
      * */
-    public void logoutUser(){
+    public void logoutUser(Context context){
         // Clearing all data from Shared Preferences
         editor.clear();
         editor.commit();
 
         // After logout redirect user to Main Activity
-        Intent i = new Intent(_context, MainActivity.class);
+        Intent i = new Intent(context, MainActivity.class);
         // Closing all the Activities
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
@@ -132,7 +132,7 @@ public class SessionManager {
         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
         // Staring Login Activity
-        _context.startActivity(i);
+        context.startActivity(i);
     }
 
     /**
@@ -140,7 +140,7 @@ public class SessionManager {
      * **/
     // Get Login State
     public boolean isLoggedIn(){
-        return pref.getBoolean(IS_LOGIN, false);
+        return pref.getBoolean(IS_LOGIN, true);
     }
 
     public String getName(){return pref.getString(KEY_NAME," ");}

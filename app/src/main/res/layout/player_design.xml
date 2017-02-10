@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp">
+
+
+
+    <TextView
+        android:id="@+id/player_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:textSize="25sp"
+        tools:text="Name" />
+
+
+    <TextView
+        android:id="@+id/playerID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/player_name"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+
+        android:paddingBottom="10dp"
+        android:textColor="#212121"
+        android:textSize="18sp"
+        tools:text="115A1067" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/checkBox"
+        android:layout_above="@+id/contactlayout"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:id="@+id/contactlayout"
+        android:layout_alignParentEnd="true"
+        android:paddingBottom="10dp"
+        android:layout_toRightOf="@+id/playerID"
+        android:layout_below="@+id/player_name">
+
+        <TextView
+            android:id="@+id/ContactText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Contact Number:"
+            android:textColor="#9E9E9E"
+            />
+
+        <TextView
+            android:id="@+id/ContactNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:text="9987884770"
+            android:textColor="#212121"
+            />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/faint_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/playerID"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/darker_gray" />
+
+
+
+
+</RelativeLayout>
+
+
