@@ -40,6 +40,10 @@ public class SessionManager {
     // Email address (make variable public to access from outside)
     public static final String KEY_EMAIL = "email";
 
+    public static final String EVENT_ID = "id";
+
+
+
     // Constructor
     public SessionManager(Context context){
         this._context = context;
@@ -50,7 +54,7 @@ public class SessionManager {
     /**
      * Create login session
      * */
-    public void createLoginSession(String name, String email,String event,String ph_contact){
+    public void createLoginSession(String name, String email,String event,String ph_contact,String id){
         // Storing login value as TRUE
         editor.putBoolean(IS_LOGIN, true);
 
@@ -61,6 +65,9 @@ public class SessionManager {
         editor.putString(KEY_EMAIL, email);
 
         editor.putString(EVENT,event);
+
+        editor.putString(EVENT_ID,id);
+
 
         editor.putString(PHONECONTACT,ph_contact);
 
@@ -143,6 +150,9 @@ public class SessionManager {
     public String getEventName(){return pref.getString(EVENT," ");}
 
     public String getContact(){return pref.getString(PHONECONTACT," ");}
+
+    public String getID(){return pref.getString(EVENT_ID," ");}
+
 
 
 }
