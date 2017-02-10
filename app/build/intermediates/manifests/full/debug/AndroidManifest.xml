@@ -45,7 +45,8 @@
         </activity>
         <activity
             android:name="siesgst.tml17.idscan.DetailActivity"
-            android:screenOrientation="portrait" />
+            android:label="@string/title_activity_detail"
+            android:theme="@style/AppTheme" />
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:clearTaskOnLaunch="true"

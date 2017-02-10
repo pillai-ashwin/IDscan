@@ -12,21 +12,21 @@
         android:layout_width="match_parent"
         android:inputType="textEmailAddress"
         android:layout_above="@+id/password"
-        android:hint="username"/>
+        android:hint="Username"/>
 
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
-        android:inputType="numberPassword"
+        android:inputType="textPassword"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:hint="password"/>
+        android:hint="Password"/>
 
     <Button
         android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:text="LOGIN"
         android:layout_below="@+id/password"
         android:layout_centerHorizontal="true" />
