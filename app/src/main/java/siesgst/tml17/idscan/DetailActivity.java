@@ -1,17 +1,15 @@
 package siesgst.tml17.idscan;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.text.InputType;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -27,7 +25,6 @@ import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -70,8 +67,7 @@ public class DetailActivity extends AppCompatActivity {
         if (id == R.id.action_scan) {
             //Toast.makeText(DetailActivity.this,"Scan", Toast.LENGTH_SHORT).show();
             scan();
-
-          //  play(barcode_scan);
+            //play(barcode_scan);
             return true;
         }
         else if (id == R.id.action_manually) {
@@ -107,8 +103,8 @@ public class DetailActivity extends AppCompatActivity {
                 a=adapter.getselectedList();
             if(a.size()!=0) {
                 for (int i = 0; i < a.size(); i++) {
-                    sb.append(a.get(i).getUID());
-                    sb.append("\n");
+                    String prn = a.get(i).getUID();
+                    UIDupdate(prn);
                 }
                 Toast.makeText(DetailActivity.this, sb, Toast.LENGTH_SHORT).show();
             }
@@ -137,7 +133,8 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.content_detail);
         session=new SessionManager(DetailActivity.this);
         rv= (RecyclerView)findViewById(R.id.rv);
-        init();
+      //  init();
+        PlayerList();
         rv.setLayoutManager(new LinearLayoutManager(DetailActivity.this));
 
         adapter=new RecyclerViewAdapter(DetailActivity.this,player);
@@ -166,7 +163,6 @@ public class DetailActivity extends AppCompatActivity {
             if (result.getContents() == null) {
                 Log.d("MainActivity", "cancelled scan");
                 flag=false;
-                buildDialog(false);
                 Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show();
                 barcode_scan="fail";
             } else {
@@ -174,17 +170,18 @@ public class DetailActivity extends AppCompatActivity {
                 barcode_scan = result.getContents();
                 flag=true;
                 barcode_scan="true";
-                buildDialog(true);
+                //buildDialog(true);
                 Toast.makeText(this, "Scanned: " + barcode_scan, Toast.LENGTH_LONG).show();
-               // play(barcode_scan);
+                play(barcode_scan);
             }
         }
     }
     public void play(String prn)
     {
         Intent intent = getIntent();
-        String id1 = intent.getStringExtra("id");
-        String url = "http://192.168.1.100/play.php";
+        String id1=session.getID();
+        Log.v("tag",id1);
+        String url = "http://192.168.43.221/play.php";
         OkHttpClient client = new OkHttpClient();
         RequestBody body = new FormBody.Builder()
                 .add("prn", prn)
@@ -212,9 +209,22 @@ public class DetailActivity extends AppCompatActivity {
                     String message = root.optString("message");
                     if(message.equalsIgnoreCase("play"))
                     {
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                buildDialog(true);
+                            }
+                        });
                         Log.v("tag","Can play");
                     }
                     else{
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                buildDialog(false);
+                            }
+                        });
+
                         Log.v("tag","Cannot play");
                     }
                 }
@@ -229,9 +239,8 @@ public class DetailActivity extends AppCompatActivity {
 
     public void UIDupdate(String prn)
     {
-        Intent intent = getIntent();
-        String id1 = intent.getStringExtra("id");
-        String url = "http://192.168.1.100/update.php";
+        String id1 = session.getID();
+        String url = "http://192.168.43.221/update.php";
         OkHttpClient client = new OkHttpClient();
         RequestBody body = new FormBody.Builder()
                 .add("event_id", id1)
@@ -256,13 +265,26 @@ public class DetailActivity extends AppCompatActivity {
                     JSONObject root = new JSONObject(responseString);
                     String status = root.optString("status");
                     String message = root.optString("message");
-                  //  if(message.equalsIgnoreCase("play"))
-                  //  {
-                    //    Log.v("tag","Can play");
-                   // }
-                    //else{
-                     //   Log.v("tag","Cannot play");
-                    //}
+                    if(message.equalsIgnoreCase("true"))
+                    {
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(getApplicationContext(),"Updated",Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                        Log.v("tag","Can play again");
+                    }
+                    else{
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(getApplicationContext(),"NO",Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
+                        Log.v("tag","Cannot play");
+                    }
                 }
                 catch(Exception e)
                 {
@@ -343,4 +365,173 @@ public class DetailActivity extends AppCompatActivity {
         });
         builder.show();
     }
+
+    public void PlayerList()
+    {
+        final ProgressDialog prog=new ProgressDialog(DetailActivity.this);
+        prog.setCancelable(true);
+        prog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        prog.setMessage("Getting List...");
+        prog.show();
+        player= new ArrayList<Player>();
+
+        ListAsync listAsync = new ListAsync(session.getID(),player,adapter,DetailActivity.this,prog);
+        listAsync.execute();
+
+        /*// required declarations
+        String url = "http://192.168.43.221/list.php";
+        String event_id = session.getID();
+        OkHttpClient client = new OkHttpClient();
+        RequestBody body = new FormBody.Builder()
+                .add("event_id",event_id)
+                .build();
+        request = new Request.Builder()
+                .url(url)
+                .method("POST",body.create(null,new byte[0]))
+                .post(body)
+                .build();
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                Log.v("error","error");
+                e.printStackTrace();
+            }
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                responseString = response.body().string();
+                Log.v("response", responseString);
+                try {
+                    JSONObject root = new JSONObject(responseString);
+                    String status = root.optString("status");
+                    JSONArray MessageArray = root.optJSONArray("message");
+                    for(int i=0;i<MessageArray.length();i++)
+                    {
+                        JSONObject jsonObject = MessageArray.optJSONObject(i);
+                        String id = jsonObject.optString("id");
+                        String user_id = jsonObject.optString("user_id");
+                        String event_id = jsonObject.optString("event_id");
+                        String event_name = jsonObject.optString("event_name");
+                        String event_credit = jsonObject.optString("event_credit");
+                        String statusPlayer = jsonObject.optString("status");
+
+                        if(statusPlayer.equalsIgnoreCase("0")){
+                            player.add(new Player(user_id,event_name," ","Can Play"));
+                        }
+                        else{
+                            player.add(new Player(user_id,event_name," ","Can't Play"));
+
+                        }
+                        // String created_at = MessageArray.optString("created_at");
+                        // String updated_at = MessageArray.optString("updated_at");
+                        // i have commented the above lines coz these values are always null. *Avoiding null pointer exception.*
+                        // *flies away*
+                    }
+                    adapter=new RecyclerViewAdapter(DetailActivity.this,player);
+                    prog.dismiss();
+                }
+                catch(Exception e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        });
+*/
+
+/*
+
+Sample response
+
+{
+    "status":"SUCCESS",
+    "message":[
+        {
+            "id":"1",
+            "user_id":"116A3048",
+            "event_id":"5",
+            "event_name":"Big Boss 3",
+            "event_credit":"150",
+            "status":"0",
+            "created_at":null,
+            "updated_at":null
+        },
+        {
+            "id":"2",
+            "user_id":"116A1027",
+            "event_id":"5",
+            "event_name":"Big Boss 3",
+            "event_credit":"150",
+            "status":"0",
+            "created_at":null,
+            "updated_at":null
+        },
+        {
+            "id":"3",
+            "user_id":"116A4011",
+            "event_id":"5",
+            "event_name":"Big Boss 3",
+            "event_credit":"150",
+            "status":"0",
+            "created_at":null,
+            "updated_at":null
+        },
+        {
+            "id":"4",
+            "user_id":"116A2114",
+            "event_id":"5",
+            "event_name":"Big Boss 3",
+            "event_credit":"150",
+            "status":"0",
+            "created_at":null,
+            "updated_at":null
+        },
+        {
+            "id":"5",
+            "user_id":"116A6016",
+            "event_id":"5",
+            "event_name":"Big Boss 3",
+            "event_credit":"150",
+            "status":"0",
+            "created_at":null,
+            "updated_at":null
+        },
+        {
+            "id":"6",
+            "user_id":"116A1033",
+            "event_id":"5",
+            "event_name":"Big Boss 3",
+            "event_credit":"150",
+            "status":"0",
+            "created_at":null,
+            "updated_at":null
+        },
+        {
+            "id":"7",
+            "user_id":"115A3043",
+            "event_id":"5",
+            "event_name":"Big Boss 3",
+            "event_credit":"150",
+            "status":"0",
+            "created_at":null,
+            "updated_at":null
+        },
+        {
+            "id":"8",
+            "user_id":"115A1008",
+            "event_id":"5",
+            "event_name":"Big Boss 3",
+            "event_credit":"150",
+            "status":"0",
+            "created_at":null,
+            "updated_at":null
+        }
+    ]
+}
+*/
+
+
+
+
+
+    }
+
 }

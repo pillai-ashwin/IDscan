@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -90,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.v("prog?","prog.");
                 progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
                 progressDialog.show();
-                String url = "http:/development.siesgst.ac.in/login.php";
+                String url = "http://192.168.43.221/login.php";
                 if(username.getText().toString().equals("a")&&password.getText().toString().equals("a")){
                     startActivity(new Intent(MainActivity.this,DetailActivity.class));
 
@@ -138,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
                                     String event_name = resultArrayObject.optString("event_name");
                                     String created = resultArrayObject.optString("created_at");
                                     String updated = resultArrayObject.optString("updated_at");
-                                    session.createLoginSession(fname+"  "+lname,email,event_name,contact,id);
+                                    session.createLoginSession(fname+"  "+lname,email,event_name,contact,event_id);
                                     //Long created_at = Long.parseLong(created);
                                     //Long updated_at = Long.parseLong(updated);
                                 }
@@ -146,7 +145,6 @@ public class MainActivity extends AppCompatActivity {
                                 e.printStackTrace();
                             }
                             Intent intent = new Intent(MainActivity.this,DetailActivity.class);
-                            intent.putExtra("id",event_id);
                             startActivity(intent);
                             progressDialog.dismiss();
                             //scan();

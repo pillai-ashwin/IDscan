@@ -3,156 +3,156 @@
 
     <item
         is-multidex="false"
-        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\design\25.1.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="cd7951e04cfb9a8bf008d544a478d9a8d8192d38">
-        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.android.support-design-25.1.1_c34cd00745ab4c818de2a54be2a3037034ac25ff.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\HP\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.11.0\840897fcd7223a8143f1d9b6f69714e7be34fd50\okio-1.11.0.jar"
+        jar="/Users/rohitramaswamy/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.11.0/840897fcd7223a8143f1d9b6f69714e7be34fd50/okio-1.11.0.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="840897fcd7223a8143f1d9b6f69714e7be34fd50">
-        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\okio-1.11.0_de278b2df10cb35e6856cef68cc98729c89f3f95.jar" />
+        <dex dex="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/pre-dexed/debug/okio-1.11.0_965515f168dcf97059800ddedb406ed17d5cb9ee.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\HP\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.1.1\support-annotations-25.1.1.jar"
+        jar="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
-        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\support-annotations-25.1.1_e694eb5329c313eec404da9ba29bc7f2b18b79c9.jar" />
+        sha1="cd7951e04cfb9a8bf008d544a478d9a8d8192d38">
+        <dex dex="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/pre-dexed/debug/com.android.support-design-25.1.1_49c3ba329a5badf8270309972f68e2faab8e639b.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
-        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.1.1_cdbbb554cde091a068c3856305470a218894284b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\transition\25.1.1\jars\classes.jar"
+        jar="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="15b049fedbd8e3926bf99d9e45dfc9b2a1043bb9">
-        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.android.support-transition-25.1.1_a823de917962fe01b95afd69ba4bcdf27386f2f7.jar" />
+        <dex dex="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/pre-dexed/debug/com.android.support-transition-25.1.1_190b37b2e90340f4ef1992412ccf30b7b7c7a30a.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.1.1\jars\classes.jar"
+        jar="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="c9649557905bf7a80fca9e0d54cbcb7662627860">
-        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-25.1.1_21029247dcd0b4d3cb4710c1dddeb34a52bd82ab.jar" />
+        <dex dex="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-25.1.1_87bc11e801ad175e4aa5f0673788ad4f8b811fe9.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
-        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.1.1_c0baf4810265da06bcb086bf81f841bb677a907f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
-        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.1.1_da127bacbad80d0a0672b8719faf97693b5adfba.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
-        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.1.1_58227341a3e482d7a9f41adb5ef4b3eee0412c42.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.1\jars\classes.jar"
+        jar="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.1.1_6494e9b5fb5bd694bb746164d40015699a9f0c8e.jar" />
+        <dex dex="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.1.1_03921af577b2d868c14f3d77c01537660d413fb8.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\HP\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.5.0\4b0bb6bfbecbdd42b97ff400af342bfe7f32bc83\okhttp-3.5.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="4b0bb6bfbecbdd42b97ff400af342bfe7f32bc83">
-        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\okhttp-3.5.0_ee2baf360111eb2d3fd0cdb9bbb74522c0696212.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\HP\.gradle\caches\modules-2\files-2.1\com.google.zxing\core\3.2.1\2287494d4f5f9f3a9a2bb6980e3f32053721b315\core-3.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="2287494d4f5f9f3a9a2bb6980e3f32053721b315">
-        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\core-3.2.1_e7082cf388b929b84564c87e06ec1b3d3cb1caef.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d4ce6303165f20650850673bd5891fbcca80caae">
-        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.journeyapps-zxing-android-embedded-3.2.0_d582b148d285953b1ffe43e2a09072a47cefd905.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.1\jars\classes.jar"
+        jar="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
-        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.1.1_036b403fbacf447e37314f69a7ad6f49243df091.jar" />
+        <dex dex="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.1.1_f5c46be986d2e0f56eb6073eed13fefa72fbd179.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
-        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.1.1_48da7c00ed7806119ca347460cec5adc0e302b9e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.1\jars\classes.jar"
+        jar="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
-        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.1.1_fa795763b27701bb40a8c36d82f380404a2e542d.jar" />
+        <dex dex="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.1.1_ab99c581804687aafa11e033988f57b1e916d909.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.1\jars\classes.jar"
+        jar="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
+        <dex dex="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.1.1_caa491b9734fea1a6ee1cb958a3640430ab261c3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rohitramaswamy/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.5.0/4b0bb6bfbecbdd42b97ff400af342bfe7f32bc83/okhttp-3.5.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4b0bb6bfbecbdd42b97ff400af342bfe7f32bc83">
+        <dex dex="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/pre-dexed/debug/okhttp-3.5.0_17e88db762c7505be565d3789e8d030af58fb5ce.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
+        <dex dex="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.1.1_ede4609290db1a60e0712deb9a4ac1a114a2c243.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
+        <dex dex="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.1.1_d0798e64126821a5ad3852e2e0e591444a8b49b6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.1.1_d14ea32feadf2fdb9e798c90fdea7ae03ccf84c2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
-        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.1.1_ac26c639bda4f9170ad557c27f34b5cad55e44d5.jar" />
+        <dex dex="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.1.1_4fa4dfeb8eac60e8f3b8531b518eafcb76d13192.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
+        <dex dex="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.1.1_1148fc105159d53a6b495c2fd0b3f3a21690a4b1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rohitramaswamy/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.1/support-annotations-25.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
+        <dex dex="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/pre-dexed/debug/support-annotations-25.1.1_e360e24142cf95baf70e4328de14e6b50b3e388c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d4ce6303165f20650850673bd5891fbcca80caae">
+        <dex dex="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/pre-dexed/debug/com.journeyapps-zxing-android-embedded-3.2.0_f6b0ca598e9ce7732ff012863395bd0cc9a36ba9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rohitramaswamy/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.2.1/2287494d4f5f9f3a9a2bb6980e3f32053721b315/core-3.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2287494d4f5f9f3a9a2bb6980e3f32053721b315">
+        <dex dex="/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/pre-dexed/debug/core-3.2.1_dd9174256690c10b3ed1c6501caa9dc4682b63fa.jar" />
     </item>
 
 </items>

@@ -1,148 +1,148 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml:2:1-31:12
+ADDED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml:2:1-31:12
 	package
-		ADDED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml:3:5-35
-		INJECTED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml
+		ADDED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml:3:5-35
+		INJECTED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml
+		INJECTED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml
+		INJECTED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml:5:5-67
+ADDED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml:5:5-67
 	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml:5:22-64
+		ADDED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml:7:5-29:19
-MERGED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:45:5-53:19
-MERGED from [com.android.support:design:25.1.1] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\design\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:appcompat-v7:25.1.1] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.1.1] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.1\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:25.1.1] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.1\AndroidManifest.xml:23:5-20
-MERGED from [com.android.support:transition:25.1.1] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\transition\25.1.1\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:25.1.1] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:25.1.1] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.1.1] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.1.1] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.1.1] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.1.1] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.1\AndroidManifest.xml:25:5-20
+ADDED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml:7:5-29:19
+MERGED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:45:5-53:19
+MERGED from [com.android.support:design:25.1.1] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:25.1.1] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.1.1] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.1.1] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:transition:25.1.1] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:25.1.1] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.1.1] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.1.1] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.1.1] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.1.1] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.1.1] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/AndroidManifest.xml:25:5-20
 	android:label
-		ADDED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml:10:9-41
+		ADDED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml:10:9-41
 	android:supportsRtl
-		ADDED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml:11:9-35
 	android:allowBackup
-		ADDED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml:8:9-35
+		ADDED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml:8:9-35
 	android:icon
-		ADDED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml:9:9-43
+		ADDED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml:9:9-43
 	android:theme
-		ADDED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml:12:9-40
+		ADDED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml:12:9-40
 activity#siesgst.tml17.idscan.MainActivity
-ADDED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml:13:9-15:20
+ADDED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml:13:9-15:20
 	android:theme
-		ADDED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml:14:13-48
+		ADDED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml:14:13-48
 	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml:13:19-47
+		ADDED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml:13:19-47
 activity#siesgst.tml17.idscan.DetailActivity
-ADDED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml:16:9-18:52
+ADDED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml:16:9-18:52
 	android:screenOrientation
-		ADDED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml:18:13-49
+		ADDED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml:18:13-49
 	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml:17:13-43
+		ADDED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml:17:13-43
 activity#siesgst.tml17.idscan.Splash
-ADDED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml:19:9-27:20
+ADDED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml:19:9-27:20
 	android:theme
-		ADDED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml:21:13-63
+		ADDED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml:21:13-63
 	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml:19:19-41
+		ADDED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml:19:19-41
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml:22:13-26:29
+ADDED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml:22:13-26:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml:23:17-69
+ADDED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml:23:17-69
 	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml:23:25-66
+		ADDED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml:23:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml:25:17-77
+ADDED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml:25:17-77
 	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml:25:27-74
+		ADDED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml:25:27-74
 uses-sdk
-INJECTED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:19:5-43
-MERGED from [com.android.support:design:25.1.1] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\design\25.1.1\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:25.1.1] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.1\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.1.1] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.1.1] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.1\AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:recyclerview-v7:25.1.1] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.1.1\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:25.1.1] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\transition\25.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:25.1.1] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.1\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.1.1] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.1\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.1.1] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.1\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.1.1] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.1\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.1.1] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.1\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.1.1] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.1\AndroidManifest.xml:21:5-23:58
+INJECTED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:19:5-43
+MERGED from [com.android.support:design:25.1.1] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.1.1] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.1.1] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.1.1] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:recyclerview-v7:25.1.1] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.1.1] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.1.1] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.1.1] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.1/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.1.1] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.1.1] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.1.1] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.1.1] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.1.1] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\design\25.1.1\AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:25.1.1] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml
+		INJECTED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\HP\AndroidStudioProjects\IDscan\app\src\main\AndroidManifest.xml
+		INJECTED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/rohitramaswamy/Desktop/IDscan/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.CAMERA
-ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:21:5-65
+ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:21:5-65
 	android:name
-		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:21:22-62
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:21:22-62
 uses-feature#android.hardware.camera
-ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:24:5-26:36
+ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:24:5-26:36
 	android:required
-		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:26:9-33
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:26:9-33
 	android:name
-		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:25:9-47
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:25:9-47
 uses-feature#android.hardware.camera.front
-ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:27:5-29:36
+ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:27:5-29:36
 	android:required
-		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:29:9-33
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:29:9-33
 	android:name
-		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:28:9-53
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:28:9-53
 uses-feature#android.hardware.camera.autofocus
-ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:32:5-34:36
+ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:32:5-34:36
 	android:required
-		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:34:9-33
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:34:9-33
 	android:name
-		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:33:9-57
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:33:9-57
 uses-feature#android.hardware.camera.flash
-ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:35:5-37:36
+ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:35:5-37:36
 	android:required
-		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:37:9-33
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:37:9-33
 	android:name
-		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:36:9-53
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:36:9-53
 uses-feature#android.hardware.screen.landscape
-ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:38:5-40:36
+ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:38:5-40:36
 	android:required
-		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:40:9-33
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:40:9-33
 	android:name
-		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:39:9-57
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:39:9-57
 uses-feature#android.hardware.wifi
-ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:41:5-43:36
+ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:41:5-43:36
 	android:required
-		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:43:9-33
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:43:9-33
 	android:name
-		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:42:9-45
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:42:9-45
 activity#com.journeyapps.barcodescanner.CaptureActivity
-ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:46:9-52:63
+ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:46:9-52:63
 	android:clearTaskOnLaunch
-		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:48:13-45
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:48:13-45
 	android:screenOrientation
-		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:49:13-56
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:49:13-56
 	android:stateNotNeeded
-		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:50:13-42
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:50:13-42
 	android:windowSoftInputMode
-		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:52:13-60
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:52:13-60
 	android:theme
-		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:51:13-54
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:51:13-54
 	android:name
-		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\AndroidManifest.xml:47:13-74
+		ADDED from [com.journeyapps:zxing-android-embedded:3.2.0] /Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/AndroidManifest.xml:47:13-74
