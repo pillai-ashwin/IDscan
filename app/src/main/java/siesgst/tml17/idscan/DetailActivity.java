@@ -3,17 +3,23 @@ package siesgst.tml17.idscan;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.InputType;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +27,7 @@ import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -36,6 +43,7 @@ import okhttp3.Response;
 
 public class DetailActivity extends AppCompatActivity {
     Button scan;
+    boolean flag=false;
     String barcode_scan;
     private Request request;
     String responseString;
@@ -62,18 +70,19 @@ public class DetailActivity extends AppCompatActivity {
         if (id == R.id.action_scan) {
             //Toast.makeText(DetailActivity.this,"Scan", Toast.LENGTH_SHORT).show();
             scan();
+
           //  play(barcode_scan);
             return true;
         }
         else if (id == R.id.action_manually) {
             Log.d("add manually","in");
             AlertDialog.Builder builder = new AlertDialog.Builder(DetailActivity.this);
-            builder.setTitle("Input PRN");
+            LayoutInflater inflater = DetailActivity.this.getLayoutInflater();
+            final View view=inflater.inflate(R.layout.dialog_box_layout, null);
             // Set up the input
-            final EditText input = new EditText(DetailActivity.this);
-            // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
-            input.setInputType(InputType.TYPE_CLASS_TEXT );
-            builder.setView(input);
+            builder.setView(view);
+
+            final  EditText input=(EditText)view.findViewById(R.id.ManualUID);
             // Set up the buttons
             builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 @Override
@@ -96,12 +105,17 @@ public class DetailActivity extends AppCompatActivity {
         else if(id==R.id.update_manually){
 
                 a=adapter.getselectedList();
-                for(int i=0;i<a.size();i++ ){
+            if(a.size()!=0) {
+                for (int i = 0; i < a.size(); i++) {
                     sb.append(a.get(i).getUID());
                     sb.append("\n");
                 }
                 Toast.makeText(DetailActivity.this, sb, Toast.LENGTH_SHORT).show();
+            }
+            else{
+                Toast.makeText(DetailActivity.this, "No items selected", Toast.LENGTH_SHORT).show();
 
+            }
             return true;
 
         }
@@ -142,7 +156,7 @@ public class DetailActivity extends AppCompatActivity {
         integrator.setBeepEnabled(true);
         integrator.setBarcodeImageEnabled(false);
         integrator.initiateScan();
-        integrator.setOrientationLocked(true);
+        integrator.setOrientationLocked(false);
     }
 
     @Override
@@ -151,10 +165,16 @@ public class DetailActivity extends AppCompatActivity {
         if (result != null) {
             if (result.getContents() == null) {
                 Log.d("MainActivity", "cancelled scan");
+                flag=false;
+                buildDialog(false);
                 Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show();
+                barcode_scan="fail";
             } else {
                 Log.d("MainActivity", "Scanned");
                 barcode_scan = result.getContents();
+                flag=true;
+                barcode_scan="true";
+                buildDialog(true);
                 Toast.makeText(this, "Scanned: " + barcode_scan, Toast.LENGTH_LONG).show();
                // play(barcode_scan);
             }
@@ -164,7 +184,7 @@ public class DetailActivity extends AppCompatActivity {
     {
         Intent intent = getIntent();
         String id1 = intent.getStringExtra("id");
-        String url = "http://192.168.43.221/play.php";
+        String url = "http://192.168.1.100/play.php";
         OkHttpClient client = new OkHttpClient();
         RequestBody body = new FormBody.Builder()
                 .add("prn", prn)
@@ -187,7 +207,8 @@ public class DetailActivity extends AppCompatActivity {
                 Log.v("response", responseString);
                 try {
                     JSONObject root = new JSONObject(responseString);
-                    String status = root.optString("status");
+                    String status = root.optString("s" +
+                            "status");
                     String message = root.optString("message");
                     if(message.equalsIgnoreCase("play"))
                     {
@@ -210,7 +231,7 @@ public class DetailActivity extends AppCompatActivity {
     {
         Intent intent = getIntent();
         String id1 = intent.getStringExtra("id");
-        String url = "http://192.168.43.221/update.php";
+        String url = "http://192.168.1.100/update.php";
         OkHttpClient client = new OkHttpClient();
         RequestBody body = new FormBody.Builder()
                 .add("event_id", id1)
@@ -284,183 +305,42 @@ public class DetailActivity extends AppCompatActivity {
 
 
     }
-}
-/*
-*
-* package siesgst.tml17.idscan;
 
-import android.app.Activity;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.text.InputType;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
+    void buildDialog(boolean decide){
 
-import com.google.zxing.integration.android.IntentIntegrator;
-import com.google.zxing.integration.android.IntentResult;
+        final AlertDialog.Builder builder = new AlertDialog.Builder(DetailActivity.this);
+        LayoutInflater inflater = DetailActivity.this.getLayoutInflater();
+        final View view=inflater.inflate(R.layout.uid_result, null);
+        // Set up the input
+        builder.setView(view);
 
-import org.json.JSONObject;
 
-import java.io.IOException;
+        final TextView button =(TextView)view.findViewById(R.id.scan_status);
+        final ImageView img=(ImageView)view.findViewById(R.id.uid_result_image);
+        final TextView name =(TextView)view.findViewById(R.id.result_name);
 
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.FormBody;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
+        //GradientDrawable imgBackground = (GradientDrawable) img.getBackground();
 
-public class DetailActivity extends AppCompatActivity {
+        name.setText(barcode_scan);
 
-    Button scan;
-    String barcode_scan;
-    private Request request;
-    String responseString;
-    SessionManager session;
-    TextView EventIdName;
-    TextView Email;
-    TextView Event;
-    TextView Contact_number;
-    Button logout;
-    TextView add;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail);
-        session=new SessionManager(DetailActivity.this);
-        scan = (Button)findViewById(R.id.Scan);
-        EventIdName=(TextView) findViewById(R.id.head_name);
-        Email=(TextView) findViewById(R.id.head_email);
-        Event=(TextView) findViewById(R.id.event_name);
-        Contact_number=(TextView) findViewById(R.id.head_contact);
-        logout=(Button)findViewById(R.id.logout_id);
-        add=(TextView)findViewById(R.id.manual_addition);
-        EventIdName.setText(session.getName());
-        Email.setText(session.getEmail());
-        Event.setText(session.getEventName());
-        Contact_number.setText(session.getContact());
-        scan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                scan();
-            }
-        });
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(DetailActivity.this,MainActivity.class));
-
-            }
-        });
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(DetailActivity.this);
-                builder.setTitle("Input PRN");
-                // Set up the input
-                final EditText input = new EditText(DetailActivity.this);
-                // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
-                input.setInputType(InputType.TYPE_CLASS_TEXT );
-                builder.setView(input);
-                // Set up the buttons
-                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        barcode_scan = input.getText().toString();
-                        Toast.makeText(DetailActivity.this, "Input="+barcode_scan, Toast.LENGTH_LONG).show();
-                        play(barcode_scan);
-                    }
-                });
-                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                    }
-                });
-                builder.show();
-            }
-        });
-    }
-    public void scan(){
-        final Activity activity = this;
-        IntentIntegrator integrator = new IntentIntegrator(activity);
-        integrator.setDesiredBarcodeFormats(IntentIntegrator.ALL_CODE_TYPES);
-        integrator.setPrompt("Set over barcode of SIES GST College ID");
-        integrator.setCameraId(0);
-        integrator.setBeepEnabled(true);
-        integrator.setBarcodeImageEnabled(false);
-        integrator.initiateScan();
-        integrator.setOrientationLocked(true);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
-        if (result != null) {
-            if (result.getContents() == null) {
-                Log.d("MainActivity", "cancelled scan");
-                Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show();
-            } else {
-                Log.d("MainActivity", "Scanned");
-                barcode_scan = result.getContents();
-                Toast.makeText(this, "Scanned: " + barcode_scan, Toast.LENGTH_LONG).show();
-                play(barcode_scan);
-            }
+        if(decide){
+            img.setBackgroundColor(Color.parseColor("#00E676"));
+            button.setBackgroundColor(Color.parseColor("#00E676"));
+            img.setImageResource(R.drawable.tick);
         }
-    }
-    public void play(String prn)
-    {
-        Intent intent = getIntent();
-        String id1 = session.getID();
-        String url = "http://192.168.43.10/play.php";
-        OkHttpClient client = new OkHttpClient();
-        RequestBody body = new FormBody.Builder()
-                .add("prn", prn)
-                .add("event_id", id1)
-                .build();
-        request = new Request.Builder()
-                .url(url)
-                .method("POST", body.create(null, new byte[0]))
-                .post(body)
-                .build();
-        Log.v("url",body.toString());
-        client.newCall(request).enqueue(new Callback() {
+        else{
+            img.setBackgroundColor(Color.parseColor("#F44336"));
+            button.setBackgroundColor(Color.parseColor("#F44336"));
+
+            img.setImageResource(R.drawable.cross);
+        }
+
+        // Set up the buttons
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onFailure(Call call, IOException e) {
-                e.printStackTrace();
-            }
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-                responseString = response.body().string();
-                Log.v("response", responseString);
-                try {
-                    JSONObject root = new JSONObject(responseString);
-                    String status = root.optString("status");
-                    String message = root.optString("message");
-                    if(message.equalsIgnoreCase("play"))
-                    {
-                        Log.v("tag","Can play");
-                    }
-                    else{
-                        Log.v("tag","Cannot play");
-                    }
-                }
-                catch(Exception e)
-                {
-                    e.printStackTrace();
-                }
-                //scan();
+            public void onClick(View view) {
             }
         });
+        builder.show();
     }
 }
-*/

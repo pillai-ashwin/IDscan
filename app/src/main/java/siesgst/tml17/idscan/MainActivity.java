@@ -5,10 +5,12 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     String barcode_scan;
     SessionManager session;
     EditText username,password;
-    Button login;
+    TextView login;
     private Request request;
     String responseString;
     String event_id;
@@ -45,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         //scan();
         //android.base64.encode(NO_WARP);
         session=new SessionManager(MainActivity.this);
+        Toolbar toolbar =(Toolbar)findViewById(R.id.toolbar);
         Login_try();
     }
 
@@ -77,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
         */
         username = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
-        login = (Button) findViewById(R.id.login);
+        login = (TextView) findViewById(R.id.login);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.v("prog?","prog.");
                 progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
                 progressDialog.show();
-                String url = "http://192.168.43.221/login.php";
+                String url = "http:/development.siesgst.ac.in/login.php";
                 if(username.getText().toString().equals("a")&&password.getText().toString().equals("a")){
                     startActivity(new Intent(MainActivity.this,DetailActivity.class));
 

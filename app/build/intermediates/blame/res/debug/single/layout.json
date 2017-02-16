@@ -88,6 +88,14 @@
         "source": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_box_layout.xml",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\src\\main\\res\\layout\\dialog_box_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\res\\merged\\debug\\layout\\uid_result.xml",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\src\\main\\res\\layout\\uid_result.xml"
+    },
+    {
         "merged": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
         "source": "C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\layout\\abc_activity_chooser_view.xml"
     },

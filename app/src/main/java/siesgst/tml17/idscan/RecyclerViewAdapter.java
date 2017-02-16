@@ -1,6 +1,7 @@
 package siesgst.tml17.idscan;
 
 import android.content.Context;
+import android.support.v7.view.ActionMode;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.util.SparseBooleanArray;
@@ -20,6 +21,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     List<Player> player;
     private SparseBooleanArray selectedItems;
     List<Player> selected=new ArrayList<Player>();
+    ActionMode action;
 
 
     // UpdateSQLite sql;
@@ -136,7 +138,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 CheckBox ch=(CheckBox)v;
                 if(ch.isChecked()){
                     selected.add(player.get(pos));
-                }
+
+               }
                 else{
                     selected.remove(player.get(pos));
                 }

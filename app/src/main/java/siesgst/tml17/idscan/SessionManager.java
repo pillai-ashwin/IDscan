@@ -140,7 +140,7 @@ public class SessionManager {
      * **/
     // Get Login State
     public boolean isLoggedIn(){
-        return pref.getBoolean(IS_LOGIN, true);
+        return pref.getBoolean(IS_LOGIN, false);
     }
 
     public String getName(){return pref.getString(KEY_NAME," ");}
