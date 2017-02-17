@@ -3,6 +3,7 @@ package siesgst.tml17.idscan;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
 import org.json.JSONArray;
@@ -27,26 +28,31 @@ public class ListAsync extends AsyncTask<String,Void,String>
     public RecyclerViewAdapter adapter;
     public Context context;
     ProgressDialog prog ;
+    SessionManager session;
+    RecyclerView rv;
 
     //public ProgressDialog prog;
 
-    public ListAsync(String event_id, List<Player> player,RecyclerViewAdapter adapter,Context context)
+    public ListAsync(String event_id, Context context, RecyclerView rv, RecyclerViewAdapter adapter)
     {
         this.event_id = event_id;
         this.player = player;
         this.adapter = adapter;
         this.context = context;
+        session= new SessionManager(context);
+        this.rv=rv;
         //this.prog = prog;
     }
 
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        prog=new ProgressDialog(context);
+        prog= new ProgressDialog(context);
         prog.setCancelable(true);
         prog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         prog.setMessage("Getting List...");
         prog.setTitle("TML");
+        Log.v("tag","before prog.show");
         prog.show();
     }
 
@@ -89,6 +95,7 @@ public class ListAsync extends AsyncTask<String,Void,String>
 
     @Override
     protected void onPostExecute(String s) {
+        Log.v("responsePost","OnPostExcecute !");
         Log.v("response", s);
         try {
             JSONObject root = new JSONObject(s);
@@ -105,10 +112,10 @@ public class ListAsync extends AsyncTask<String,Void,String>
                 String statusPlayer = jsonObject.optString("status");
 
                 if(statusPlayer.equalsIgnoreCase("0")){
-                    player.add(new Player(user_id,event_name," ","Can Play"));
+                    session.addPlayer(new Player(user_id,event_name," ","Can Play"));
                 }
                 else{
-                    player.add(new Player(user_id,event_name," ","Can't Play"));
+                    session.addPlayer(new Player(user_id,event_name," ","Can't Play"));
 
                 }
                 // String created_at = MessageArray.optString("created_at");
@@ -116,7 +123,7 @@ public class ListAsync extends AsyncTask<String,Void,String>
                 // i have commented the above lines coz these values are always null. *Avoiding null pointer exception.*
                 // *flies away*
             }
-            adapter=new RecyclerViewAdapter(context,player);
+
             prog.dismiss();
         }
         catch(Exception e)
@@ -127,4 +134,6 @@ public class ListAsync extends AsyncTask<String,Void,String>
 
 
     }
+
+
 }

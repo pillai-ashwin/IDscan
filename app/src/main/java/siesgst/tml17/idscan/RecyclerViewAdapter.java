@@ -9,9 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
-import android.widget.ImageView;
 import android.widget.TextView;
-
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +20,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private SparseBooleanArray selectedItems;
     List<Player> selected=new ArrayList<Player>();
     ActionMode action;
+    SessionManager session;
 
 
     // UpdateSQLite sql;
@@ -32,10 +31,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return selected;
     }
 
-    public RecyclerViewAdapter(Context context, List<Player> p){
+    public RecyclerViewAdapter(Context context){
 //        persons=sql.getAllContacts();
         //      layoutInflater=LayoutInflater.from(context);
-        player=p;
+        session=new SessionManager(context);
+        Log.v("tag","Recycler ");
+        player=session.getPlayer();
         selectedItems = new SparseBooleanArray();
 
         ctx=context;

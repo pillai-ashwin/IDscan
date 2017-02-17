@@ -29,6 +29,8 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
+import static android.text.TextUtils.isEmpty;
+
 public class MainActivity extends AppCompatActivity {
     String barcode_scan;
     SessionManager session;
@@ -83,75 +85,83 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final ProgressDialog progressDialog = new ProgressDialog(MainActivity.this);
-                progressDialog.setCancelable(true);
-                progressDialog.setMessage("Signing In...");
-                Log.v("prog?","prog.");
-                progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-                progressDialog.show();
+
                 String url = "http://development.siesgst.ac.in/login.php";
 //                if(username.getText().toString().equals("a")&&password.getText().toString().equals("a")){
 //                    startActivity(new Intent(MainActivity.this,DetailActivity.class));
 //
 //                }
-                OkHttpClient client = new OkHttpClient();
+                if(!isEmpty(username.getText().toString()) && !isEmpty(password.getText().toString())) {
+                    final ProgressDialog progressDialog = new ProgressDialog(MainActivity.this);
+                    progressDialog.setCancelable(true);
+                    progressDialog.setMessage("Signing In...");
+                    Log.v("prog?","prog.");
+                    progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                    progressDialog.show();
+                    OkHttpClient client = new OkHttpClient();
 
-                RequestBody body = new FormBody.Builder()
-                        .add("email", username.getText().toString())
-                        .add("password", password.getText().toString())
-                        .build();
-                request = new Request.Builder()
-                        .url(url)
-                        .method("POST", body.create(null, new byte[0]))
-                        .post(body)
-                        .build();
-                Log.v("login",body.toString());
-                client.newCall(request).enqueue(new Callback() {
-                    @Override
-                    public void onFailure(Call call, IOException e) {
-                        Log.d("Nigga","Fail");
-                        e.printStackTrace();
-                    }
-                    @Override
-                    public void onResponse(Call call, Response response) throws IOException {
-                        responseString = response.body().string();
-                        Log.v("response", responseString);
-                        if (responseString.contains("true")) {
-                            JSONObject root = null;
-                            try {
-                                Log.d("Nigga","response");
-                                root = new JSONObject(responseString);
-                                String status = root.optString("status");
-                                String message = root.optString("message");
-                                JSONArray result = root.optJSONArray("result");
-                                for(int i=0;i<result.length();i++)
-                                {
-                                    JSONObject resultArrayObject = result.optJSONObject(i);
-                                    String id = resultArrayObject.optString("id");
-                                    String fname = resultArrayObject.optString("fname");
-                                    String lname = resultArrayObject.optString("lname");
-
-                                    String email = resultArrayObject.optString("email");
-                                    String contact = resultArrayObject.optString("contact");
-                                    event_id = resultArrayObject.optString("event_id");
-                                    String event_name = resultArrayObject.optString("event_name");
-                                    String created = resultArrayObject.optString("created_at");
-                                    String updated = resultArrayObject.optString("updated_at");
-                                    session.createLoginSession(fname+"  "+lname,email,event_name,contact,event_id);
-                                    //Long created_at = Long.parseLong(created);
-                                    //Long updated_at = Long.parseLong(updated);
-                                }
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                            Intent intent = new Intent(MainActivity.this,DetailActivity.class);
-                            startActivity(intent);
-                            progressDialog.dismiss();
-                            //scan();
+                    RequestBody body = new FormBody.Builder()
+                            .add("email", username.getText().toString())
+                            .add("password", password.getText().toString())
+                            .build();
+                    request = new Request.Builder()
+                            .url(url)
+                            .method("POST", body.create(null, new byte[0]))
+                            .post(body)
+                            .build();
+                    Log.v("login", body.toString());
+                    client.newCall(request).enqueue(new Callback() {
+                        @Override
+                        public void onFailure(Call call, IOException e) {
+                            Log.d("Nigga", "Fail");
+                            e.printStackTrace();
                         }
-                    }
 
-                });
+                        @Override
+                        public void onResponse(Call call, Response response) throws IOException {
+                            responseString = response.body().string();
+                            Log.v("response", responseString);
+                            if (responseString.contains("true")) {
+                                JSONObject root = null;
+                                try {
+                                    Log.d("Nigga", "response");
+                                    root = new JSONObject(responseString);
+                                    String status = root.optString("status");
+                                    String message = root.optString("message");
+                                    JSONArray result = root.optJSONArray("result");
+                                    for (int i = 0; i < result.length(); i++) {
+                                        JSONObject resultArrayObject = result.optJSONObject(i);
+                                        String id = resultArrayObject.optString("id");
+                                        String fname = resultArrayObject.optString("fname");
+                                        String lname = resultArrayObject.optString("lname");
+
+                                        String email = resultArrayObject.optString("email");
+                                        String contact = resultArrayObject.optString("contact");
+                                        event_id = resultArrayObject.optString("event_id");
+                                        String event_name = resultArrayObject.optString("event_name");
+                                        String created = resultArrayObject.optString("created_at");
+                                        String updated = resultArrayObject.optString("updated_at");
+                                        session.createLoginSession(fname + "  " + lname, email, event_name, contact, event_id);
+                                        //Long created_at = Long.parseLong(created);
+                                        //Long updated_at = Long.parseLong(updated);
+                                    }
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                                Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+                                startActivity(intent);
+                                finish();
+                                progressDialog.dismiss();
+                                //scan();
+                            }
+                        }
+
+                    });
+                }
+                else{
+                    Toast.makeText(MainActivity.this, "Fill in all details", Toast.LENGTH_LONG).show();
+
+                }
             }
         });
     }

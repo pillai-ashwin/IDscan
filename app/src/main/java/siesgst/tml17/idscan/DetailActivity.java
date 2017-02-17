@@ -55,7 +55,7 @@ public class DetailActivity extends AppCompatActivity {
     private Request request;
     String responseString;
     SessionManager session;
-    List<Player> player = new ArrayList<Player>();
+     List<Player> player = new ArrayList<Player>();
     RecyclerViewAdapter adapter;
     TextView EventIdName;
     TextView Email;
@@ -119,7 +119,6 @@ public class DetailActivity extends AppCompatActivity {
                     String prn = a.get(i).getUID();
                     UIDupdate(prn);
                 }
-                Toast.makeText(DetailActivity.this, sb, Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(DetailActivity.this, "No items selected", Toast.LENGTH_SHORT).show();
 
@@ -150,10 +149,11 @@ public class DetailActivity extends AppCompatActivity {
         rv = (RecyclerView) findViewById(R.id.rv);
         PlayerList();
         //  init();
-        adapter = new RecyclerViewAdapter(DetailActivity.this, player);
+        Log.v("tag","back to OnCreate");
+        adapter = new RecyclerViewAdapter(DetailActivity.this);
         rv.setLayoutManager(new LinearLayoutManager(DetailActivity.this));
         rv.setAdapter(adapter);
-      //  prog.dismiss();
+        //prog.dismiss();
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -348,14 +348,15 @@ public class DetailActivity extends AppCompatActivity {
         builder.show();
     }
 
+
+
     public void PlayerList() {
         final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
         if(activeNetwork!=null) {
 
-            player = new ArrayList<Player>();
-
-            ListAsync listAsync = new ListAsync(session.getID(), player, adapter, DetailActivity.this);
+            Log.v("tag","inplayerlist");
+            ListAsync listAsync = new ListAsync(session.getID(),  DetailActivity.this,rv,adapter);
             listAsync.execute();
         }
         else{

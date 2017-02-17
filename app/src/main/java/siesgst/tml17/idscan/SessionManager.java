@@ -3,8 +3,11 @@ package siesgst.tml17.idscan;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.util.Log;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by leprechaun on 16/1/17.
@@ -22,6 +25,8 @@ public class SessionManager {
 
     // Shared pref mode
     int PRIVATE_MODE = 0;
+
+    static List<Player> player=new ArrayList<>();
 
     // Sharedpref file name
     private static final String PREF_NAME = "MyPreferences";
@@ -152,6 +157,18 @@ public class SessionManager {
     public String getContact(){return pref.getString(PHONECONTACT," ");}
 
     public String getID(){return pref.getString(EVENT_ID," ");}
+
+
+    void addPlayer(Player pl){
+        Log.v("tag","added to player");
+
+        player.add(pl);
+    }
+
+    List<Player> getPlayer(){
+        Log.v("tag","fetched player");
+        return player;
+    }
 
 
 

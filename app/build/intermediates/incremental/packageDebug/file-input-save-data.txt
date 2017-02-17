@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Feb 17 10:24:33 IST 2017
+#Fri Feb 17 12:08:38 IST 2017
 210.set=ANDROID_RESOURCE
 282.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png
 14.set=ANDROID_RESOURCE
@@ -165,7 +165,7 @@
 130.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/common_plus_signin_btn_text_light_disabled.9.png
 171.set=ANDROID_RESOURCE
 34.set=ANDROID_RESOURCE
-182.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_switch_track_mtrl_alpha.9.png
+182.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_textfield_default_mtrl_alpha.9.png
 138.set=ANDROID_RESOURCE
 80.set=ANDROID_RESOURCE
 28.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/layout-v11/notification_template_big_media.xml
@@ -242,7 +242,7 @@
 181.set=ANDROID_RESOURCE
 44.set=ANDROID_RESOURCE
 260.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable/notification_icon_background.xml
-183.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_textfield_default_mtrl_alpha.9.png
+183.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_switch_track_mtrl_alpha.9.png
 148.set=ANDROID_RESOURCE
 90.set=ANDROID_RESOURCE
 201.set=ANDROID_RESOURCE
@@ -255,7 +255,7 @@
 155.set=ANDROID_RESOURCE
 62.base=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_
 214.base=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_
-83.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/common_google_signin_btn_text_light_normal.9.png
+83.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
 137.base=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_
 12.set=ANDROID_RESOURCE
 266.base=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_
@@ -321,7 +321,7 @@
 191.set=ANDROID_RESOURCE
 132.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable/abc_ratingbar_indicator_material.xml
 54.set=ANDROID_RESOURCE
-261.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_ic_star_black_16dp.png
+261.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_dark_normal.9.png
 184.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_ic_star_black_36dp.png
 158.set=ANDROID_RESOURCE
 211.set=ANDROID_RESOURCE
@@ -334,7 +334,7 @@
 165.set=ANDROID_RESOURCE
 63.base=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_
 215.base=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_
-84.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
+84.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/common_google_signin_btn_text_light_normal.9.png
 138.base=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_
 22.set=ANDROID_RESOURCE
 267.base=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_
@@ -398,7 +398,7 @@
 210.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/color-v23/abc_tint_edittext.xml
 133.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png
 64.set=ANDROID_RESOURCE
-262.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_dark_normal.9.png
+262.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_ic_star_black_16dp.png
 185.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/anim/abc_slide_out_top.xml
 6.set=ANDROID_RESOURCE
 160.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/layout-v11/notification_template_big_media_narrow.xml
@@ -557,7 +557,7 @@ count=301
 84.set=ANDROID_RESOURCE
 264.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/common_plus_signin_btn_text_dark_disabled.9.png
 187.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/color/abc_tint_switch_thumb.xml
-110.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/common_plus_signin_btn_text_dark_normal.9.png
+110.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_dark.9.png
 162.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-ldrtl-xxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png
 193.base=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_
 300.set=ANDROID_RESOURCE
@@ -636,7 +636,7 @@ count=301
 205.set=ANDROID_RESOURCE
 265.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/color/abc_primary_text_material_light.xml
 188.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-v21/avd_show_password_3.xml
-111.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_dark.9.png
+111.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/common_plus_signin_btn_text_dark_normal.9.png
 240.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/layout/design_navigation_item.xml
 163.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_dark_disabled.9.png
 194.base=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
@@ -715,7 +715,7 @@ count=301
 215.set=ANDROID_RESOURCE
 266.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
 189.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/common_plus_signin_btn_text_light_focused.9.png
-112.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/common_google_signin_btn_text_dark_normal.9.png
+112.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/common_plus_signin_btn_text_dark_focused.9.png
 19.set=ANDROID_RESOURCE
 241.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/layout/abc_action_menu_layout.xml
 164.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/notification_bg_normal.9.png
@@ -788,7 +788,7 @@ count=301
 138.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-v21/abc_action_bar_item_background_material.xml
 225.set=ANDROID_RESOURCE
 267.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png
-113.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/common_plus_signin_btn_text_dark_focused.9.png
+113.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/common_google_signin_btn_text_dark_normal.9.png
 29.set=ANDROID_RESOURCE
 90.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_list_pressed_holo_dark.9.png
 242.file=/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/resources-debug.ap_/res/anim/abc_popup_enter.xml
