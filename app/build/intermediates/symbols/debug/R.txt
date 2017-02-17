@@ -897,11 +897,11 @@ int id player_name 0x7f0e00af
 int id progress_circular 0x7f0e0006
 int id progress_horizontal 0x7f0e0007
 int id radio 0x7f0e006e
+int id recyclerView 0x7f0e0087
 int id result_name 0x7f0e00b7
 int id right 0x7f0e0034
 int id right_icon 0x7f0e00a9
 int id right_side 0x7f0e00a2
-int id rv 0x7f0e0087
 int id scan_status 0x7f0e00b8
 int id screen 0x7f0e0027
 int id scroll 0x7f0e0023

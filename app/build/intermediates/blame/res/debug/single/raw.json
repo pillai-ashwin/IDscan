@@ -4,6 +4,10 @@
         "source": "/Users/rohitramaswamy/Desktop/IDscan/C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.journeyapps\\zxing-android-embedded\\3.2.0\\res\\raw\\zxing_beep.ogg"
     },
     {
+        "merged": "/Users/rohitramaswamy/Desktop/proj/IDscan/app/build/intermediates/res/merged/debug/raw/zxing_beep.ogg",
+        "source": "/Users/rohitramaswamy/Desktop/proj/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/res/raw/zxing_beep.ogg"
+    },
+    {
         "merged": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/merged/debug/raw/zxing_beep.ogg",
         "source": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/res/raw/zxing_beep.ogg"
     },

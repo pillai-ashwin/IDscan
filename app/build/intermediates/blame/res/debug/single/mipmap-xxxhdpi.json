@@ -10,5 +10,9 @@
     {
         "merged": "/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher.png",
         "source": "/Users/rohitramaswamy/Desktop/IDscan/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/rohitramaswamy/Desktop/proj/IDscan/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher.png",
+        "source": "/Users/rohitramaswamy/Desktop/proj/IDscan/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     }
 ]

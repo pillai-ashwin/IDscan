@@ -3001,11 +3001,11 @@ containing a value of this type.
         public static final int progress_circular=0x7f0e0006;
         public static final int progress_horizontal=0x7f0e0007;
         public static final int radio=0x7f0e006e;
+        public static final int recyclerView=0x7f0e0087;
         public static final int result_name=0x7f0e00b7;
         public static final int right=0x7f0e0034;
         public static final int right_icon=0x7f0e00a9;
         public static final int right_side=0x7f0e00a2;
-        public static final int rv=0x7f0e0087;
         public static final int scan_status=0x7f0e00b8;
         public static final int screen=0x7f0e0027;
         public static final int scroll=0x7f0e0023;

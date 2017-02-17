@@ -4,6 +4,10 @@
         "source": "/home/adicool/AndroidStudioProjects/IDscan/app/src/main/res/menu/menu.xml"
     },
     {
+        "merged": "/Users/rohitramaswamy/Desktop/proj/IDscan/app/build/intermediates/res/merged/debug/menu/menu.xml",
+        "source": "/Users/rohitramaswamy/Desktop/proj/IDscan/app/src/main/res/menu/menu.xml"
+    },
+    {
         "merged": "/Users/rohitramaswamy/Desktop/IDscan/C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu.xml",
         "source": "/Users/rohitramaswamy/Desktop/IDscan/C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\src\\main\\res\\menu\\menu.xml"
     },

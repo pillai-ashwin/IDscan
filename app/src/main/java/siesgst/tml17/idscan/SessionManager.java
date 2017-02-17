@@ -6,7 +6,6 @@ import android.content.SharedPreferences;
 import android.util.Log;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -26,7 +25,7 @@ public class SessionManager {
     // Shared pref mode
     int PRIVATE_MODE = 0;
 
-    static List<Player> player=new ArrayList<>();
+    static List<Player> player = new ArrayList<>();
 
     // Sharedpref file name
     private static final String PREF_NAME = "MyPreferences";
@@ -48,9 +47,8 @@ public class SessionManager {
     public static final String EVENT_ID = "id";
 
 
-
     // Constructor
-    public SessionManager(Context context){
+    public SessionManager(Context context) {
         this._context = context;
         pref = _context.getSharedPreferences(PREF_NAME, PRIVATE_MODE);
         editor = pref.edit();
@@ -58,8 +56,8 @@ public class SessionManager {
 
     /**
      * Create login session
-     * */
-    public void createLoginSession(String name, String email,String event,String ph_contact,String id){
+     */
+    public void createLoginSession(String name, String email, String event, String ph_contact, String id) {
         // Storing login value as TRUE
         editor.putBoolean(IS_LOGIN, true);
 
@@ -69,61 +67,24 @@ public class SessionManager {
         // Storing email in pref
         editor.putString(KEY_EMAIL, email);
 
-        editor.putString(EVENT,event);
+        editor.putString(EVENT, event);
 
-        editor.putString(EVENT_ID,id);
+        editor.putString(EVENT_ID, id);
 
 
-        editor.putString(PHONECONTACT,ph_contact);
+        editor.putString(PHONECONTACT, ph_contact);
 
 
         // commit changes
         editor.apply();
     }
 
-    /**
-     * Check login method will check user login status
-     * If false scanner will scan next barcode to check existence in database
-     * Else won't do anything
-     * */
-    public void checkLogin(){
-        // Check login status
-        if(!this.isLoggedIn()){
-            // event head is not logged in so scan barcode to log in event head
-            Intent i = new Intent(_context, MainActivity.class);
-            // Closing all the Activities
-            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
-            // Add new Flag to start new Activity
-            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
-            // Staring Login Activity
-            _context.startActivity(i);
-        }
-
-    }
-
-
-
-    /**
-     * Get stored session data
-     * */
-    public HashMap<String, String> getUserDetails(){
-        HashMap<String, String> user = new HashMap<String, String>();
-        // user name
-        user.put(KEY_NAME, pref.getString(KEY_NAME, null));
-
-        // user email id
-        user.put(KEY_EMAIL, pref.getString(KEY_EMAIL, null));
-
-        // return user
-        return user;
-    }
 
     /**
      * Clear session details
-     * */
-    public void logoutUser(Context context){
+     */
+    public void logoutUser(Context context) {
         // Clearing all data from Shared Preferences
         editor.clear();
         editor.commit();
@@ -142,34 +103,43 @@ public class SessionManager {
 
     /**
      * Quick check for login
-     * **/
+     **/
     // Get Login State
-    public boolean isLoggedIn(){
+    public boolean isLoggedIn() {
         return pref.getBoolean(IS_LOGIN, false);
     }
 
-    public String getName(){return pref.getString(KEY_NAME," ");}
+    public String getName() {
+        return pref.getString(KEY_NAME, " ");
+    }
 
-    public String getEmail(){return pref.getString(KEY_EMAIL," ");}
+    public String getEmail() {
+        return pref.getString(KEY_EMAIL, " ");
+    }
 
-    public String getEventName(){return pref.getString(EVENT," ");}
+    public String getEventName() {
+        return pref.getString(EVENT, " ");
+    }
 
-    public String getContact(){return pref.getString(PHONECONTACT," ");}
+    public String getContact() {
+        return pref.getString(PHONECONTACT, " ");
+    }
 
-    public String getID(){return pref.getString(EVENT_ID," ");}
+    public String getID() {
+        return pref.getString(EVENT_ID, " ");
+    }
 
 
-    void addPlayer(Player pl){
-        Log.v("tag","added to player");
+    void addPlayer(Player pl) {
+        Log.v("tag", "added to player");
 
         player.add(pl);
     }
 
-    List<Player> getPlayer(){
-        Log.v("tag","fetched player");
+    List<Player> getPlayer() {
+        Log.v("tag", "fetched player");
         return player;
     }
-
 
 
 }

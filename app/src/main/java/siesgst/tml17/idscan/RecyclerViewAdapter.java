@@ -18,7 +18,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     List<Player> player;
     private SparseBooleanArray selectedItems;
-    List<Player> selected=new ArrayList<Player>();
+    List<Player> selected = new ArrayList<Player>();
     ActionMode action;
     SessionManager session;
 
@@ -27,31 +27,31 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private LayoutInflater layoutInflater;
     Context ctx;
 
-    public List<Player> getselectedList(){
+    public List<Player> getselectedList() {
         return selected;
     }
 
-    public RecyclerViewAdapter(Context context){
-//        persons=sql.getAllContacts();
-        //      layoutInflater=LayoutInflater.from(context);
-        session=new SessionManager(context);
-        Log.v("tag","Recycler ");
-        player=session.getPlayer();
+    public RecyclerViewAdapter(Context context) {
+
+        Log.v("tag", "Recycler ");
+
+        session = new SessionManager(context);
+        player = session.getPlayer();
         selectedItems = new SparseBooleanArray();
 
-        ctx=context;
+        ctx = context;
     }
 
 
     public void toggleSelection(int pos) {
         if (selectedItems.get(pos, false)) {
             selectedItems.delete(pos);
-        }
-        else {
+        } else {
             selectedItems.put(pos, true);
         }
         notifyItemChanged(pos);
     }
+
     public List<Integer> getSelectedItems() {
         List<Integer> items = new ArrayList<Integer>(selectedItems.size());
         for (int i = 0; i < selectedItems.size(); i++) {
@@ -60,46 +60,36 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return items;
     }
 
-    public static class PlayerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public static class PlayerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
 
-        //   CardView cv;
         TextView playerName;
         TextView UniqueID;
-        TextView PlayTime;
         TextView ContactNumber;
         CheckBox check;
         ItemClickListener itemClickListener;
-        //  ImageView personPhoto;
         View view;
 
         PlayerViewHolder(View itemView) {
             super(itemView);
-            // cv = (CardView) itemView.findViewById(R.id.cv);
-            playerName = (TextView)itemView.findViewById(R.id.player_name);
-            UniqueID=(TextView)itemView.findViewById(R.id.playerID);
-            // PlayTime = (TextView)itemView.findViewById(R.id.play_time);
-            ContactNumber=(TextView)itemView.findViewById(R.id.ContactNumber);
-            check=(CheckBox)itemView.findViewById(R.id.checkBox);
+            playerName = (TextView) itemView.findViewById(R.id.player_name);
+            UniqueID = (TextView) itemView.findViewById(R.id.playerID);
+            ContactNumber = (TextView) itemView.findViewById(R.id.ContactNumber);
+            check = (CheckBox) itemView.findViewById(R.id.checkBox);
             itemView.setLongClickable(true);
             check.setOnClickListener(this);
-            //   personPhoto = (ImageView)itemView.findViewById(R.id.person_photo);
 
         }
 
 
         @Override
         public void onClick(View v) {
-            this.itemClickListener.onItemClick(v,getLayoutPosition());
+            this.itemClickListener.onItemClick(v, getLayoutPosition());
         }
 
-        public void setItemClickListener(ItemClickListener i){
-            this.itemClickListener=i;
+        public void setItemClickListener(ItemClickListener i) {
+            this.itemClickListener = i;
         }
-
-
-
-
 
 
     }
@@ -107,10 +97,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public int getItemCount() {
-        if(player==null)
+        if (player == null)
             return 0;
         else {
-            return (int) player.size();
+            return player.size();
         }
     }
 
@@ -128,32 +118,25 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         playerViewHolder.UniqueID.setText(player.get(i).UID);
 
-        //  playerViewHolder.PlayTime.setText(player.get(i).Timestamp);
-
         playerViewHolder.ContactNumber.setText(player.get(i).Number);
 
-        //personViewHolder.personPhoto.setImageResource(R.drawable.updates);
         playerViewHolder.setItemClickListener(new ItemClickListener() {
             @Override
             public void onItemClick(View v, int pos) {
-                CheckBox ch=(CheckBox)v;
-                if(ch.isChecked()){
+                CheckBox ch = (CheckBox) v;
+                if (ch.isChecked()) {
                     selected.add(player.get(pos));
 
-               }
-                else{
+                } else {
                     selected.remove(player.get(pos));
                 }
             }
         });
-
-
-
+        
     }
 
     public void onAttachedToRecyclerView(RecyclerView recyclerView) {
         super.onAttachedToRecyclerView(recyclerView);
     }
-
 
 }

@@ -21,88 +21,80 @@ import java.util.List;
  * Created by rohitramaswamy on 16/02/17.
  */
 
-public class ListAsync extends AsyncTask<String,Void,String>
-{
+public class ListAsync extends AsyncTask<String, Void, String> {
     String event_id;
     public List<Player> player;
-    public RecyclerViewAdapter adapter;
+    public RecyclerViewAdapter recyclerViewAdapter;
     public Context context;
-    ProgressDialog prog ;
+    ProgressDialog prog;
     SessionManager session;
-    RecyclerView rv;
+    RecyclerView recyclerView;
 
-    //public ProgressDialog prog;
 
-    public ListAsync(String event_id, Context context, RecyclerView rv, RecyclerViewAdapter adapter)
-    {
+    public ListAsync(String event_id, Context context, RecyclerView recyclerView, RecyclerViewAdapter recyclerViewAdapter) {
         this.event_id = event_id;
         this.player = player;
-        this.adapter = adapter;
+        this.recyclerViewAdapter = recyclerViewAdapter;
         this.context = context;
-        session= new SessionManager(context);
-        this.rv=rv;
+        session = new SessionManager(context);
+        this.recyclerView = recyclerView;
         //this.prog = prog;
     }
 
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        prog= new ProgressDialog(context);
+        prog = new ProgressDialog(context);
         prog.setCancelable(true);
         prog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         prog.setMessage("Getting List...");
         prog.setTitle("TML");
-        Log.v("tag","before prog.show");
+        Log.v("tag", "before prog.show");
         prog.show();
     }
 
     @Override
     protected String doInBackground(String... params) {
 
-        String url2 = "http://development.siesgst.ac.in/list.php?event_id="+event_id;
+        String urlForList = "http://development.siesgst.ac.in/list.php?event_id=" + event_id;
         HttpURLConnection httpURLConnection = null;
         InputStream inputStream = null;
         StringBuilder stringBuilder = new StringBuilder();
-        try{
+        try {
 
-            URL url = new URL(url2);
-            httpURLConnection = (HttpURLConnection)url.openConnection();
+            URL url = new URL(urlForList);
+            httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
-            inputStream =  new BufferedInputStream(httpURLConnection.getInputStream());
+            inputStream = new BufferedInputStream(httpURLConnection.getInputStream());
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 
             String line;
-            while((line = reader.readLine())!=null) {
+            while ((line = reader.readLine()) != null) {
                 stringBuilder.append(line);
             }
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
-        }
-        finally {
-            if(httpURLConnection!=null)
-            {
+        } finally {
+            if (httpURLConnection != null) {
                 httpURLConnection.disconnect();
             }
         }
         String result = stringBuilder.toString();
-        Log.v("tag",result);
+        Log.v("tag", result);
         return result;
 
     }
 
     @Override
     protected void onPostExecute(String s) {
-        Log.v("responsePost","OnPostExcecute !");
+        Log.v("responsePost", "OnPostExcecute !");
         Log.v("response", s);
         try {
             JSONObject root = new JSONObject(s);
             String status = root.optString("status");
             JSONArray MessageArray = root.optJSONArray("message");
-            for(int i=0;i<MessageArray.length();i++)
-            {
+            for (int i = 0; i < MessageArray.length(); i++) {
                 JSONObject jsonObject = MessageArray.optJSONObject(i);
                 String id = jsonObject.optString("id");
                 String user_id = jsonObject.optString("user_id");
@@ -111,26 +103,19 @@ public class ListAsync extends AsyncTask<String,Void,String>
                 String event_credit = jsonObject.optString("event_credit");
                 String statusPlayer = jsonObject.optString("status");
 
-                if(statusPlayer.equalsIgnoreCase("0")){
-                    session.addPlayer(new Player(user_id,event_name," ","Can Play"));
-                }
-                else{
-                    session.addPlayer(new Player(user_id,event_name," ","Can't Play"));
+                if (statusPlayer.equalsIgnoreCase("0")) {
+                    session.addPlayer(new Player(user_id, event_name, " ", "Can Play"));
+                } else {
+                    session.addPlayer(new Player(user_id, event_name, " ", "Can't Play"));
 
                 }
-                // String created_at = MessageArray.optString("created_at");
-                // String updated_at = MessageArray.optString("updated_at");
-                // i have commented the above lines coz these values are always null. *Avoiding null pointer exception.*
-                // *flies away*
+
             }
 
             prog.dismiss();
-        }
-        catch(Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
-
 
 
     }

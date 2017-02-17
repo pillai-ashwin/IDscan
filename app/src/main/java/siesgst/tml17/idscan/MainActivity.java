@@ -1,6 +1,5 @@
 package siesgst.tml17.idscan;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -34,21 +33,19 @@ import static android.text.TextUtils.isEmpty;
 public class MainActivity extends AppCompatActivity {
     String barcode_scan;
     SessionManager session;
-    EditText username,password;
+    EditText username, password;
     TextView login;
     private Request request;
     String responseString;
     String event_id;
-//    BackgroundWorker backgroundWorker
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
-        //scan();
-        //android.base64.encode(NO_WARP);
-        session=new SessionManager(MainActivity.this);
-        Toolbar toolbar =(Toolbar)findViewById(R.id.toolbar);
+
+        session = new SessionManager(MainActivity.this);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         Login_try();
     }
 
@@ -71,14 +68,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    //Function to try checking database for event head record
-    //Login try can be modified to display splash screen welcoming event head to his administration page
-    public void Login_try(){
-        //String scanned_code = barcode_scan;
-        //String type = "login";
-        /*backgroundWorker = new BackgroundWorker(this);
-        backgroundWorker.execute(backgroundWorker.username,backgroundWorker.password);
-        */
+
+    public void Login_try() {
+
         username = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
         login = (TextView) findViewById(R.id.login);
@@ -87,17 +79,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 String url = "http://development.siesgst.ac.in/login.php";
-//                if(username.getText().toString().equals("a")&&password.getText().toString().equals("a")){
-//                    startActivity(new Intent(MainActivity.this,DetailActivity.class));
-//
-//                }
-                if(!isEmpty(username.getText().toString()) && !isEmpty(password.getText().toString())) {
+
+                if (!isEmpty(username.getText().toString()) && !isEmpty(password.getText().toString())) {
+
                     final ProgressDialog progressDialog = new ProgressDialog(MainActivity.this);
+
                     progressDialog.setCancelable(true);
                     progressDialog.setMessage("Signing In...");
-                    Log.v("prog?","prog.");
+                    Log.v("prog?", "prog.");
                     progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
                     progressDialog.show();
+
                     OkHttpClient client = new OkHttpClient();
 
                     RequestBody body = new FormBody.Builder()
@@ -110,10 +102,10 @@ public class MainActivity extends AppCompatActivity {
                             .post(body)
                             .build();
                     Log.v("login", body.toString());
+
                     client.newCall(request).enqueue(new Callback() {
                         @Override
                         public void onFailure(Call call, IOException e) {
-                            Log.d("Nigga", "Fail");
                             e.printStackTrace();
                         }
 
@@ -122,19 +114,21 @@ public class MainActivity extends AppCompatActivity {
                             responseString = response.body().string();
                             Log.v("response", responseString);
                             if (responseString.contains("true")) {
+
                                 JSONObject root = null;
+
                                 try {
-                                    Log.d("Nigga", "response");
                                     root = new JSONObject(responseString);
                                     String status = root.optString("status");
                                     String message = root.optString("message");
                                     JSONArray result = root.optJSONArray("result");
+
                                     for (int i = 0; i < result.length(); i++) {
+
                                         JSONObject resultArrayObject = result.optJSONObject(i);
                                         String id = resultArrayObject.optString("id");
                                         String fname = resultArrayObject.optString("fname");
                                         String lname = resultArrayObject.optString("lname");
-
                                         String email = resultArrayObject.optString("email");
                                         String contact = resultArrayObject.optString("contact");
                                         event_id = resultArrayObject.optString("event_id");
@@ -142,23 +136,23 @@ public class MainActivity extends AppCompatActivity {
                                         String created = resultArrayObject.optString("created_at");
                                         String updated = resultArrayObject.optString("updated_at");
                                         session.createLoginSession(fname + "  " + lname, email, event_name, contact, event_id);
-                                        //Long created_at = Long.parseLong(created);
-                                        //Long updated_at = Long.parseLong(updated);
+
+
                                     }
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                 }
+
                                 Intent intent = new Intent(MainActivity.this, DetailActivity.class);
                                 startActivity(intent);
                                 finish();
                                 progressDialog.dismiss();
-                                //scan();
                             }
                         }
 
                     });
-                }
-                else{
+                } else {
+
                     Toast.makeText(MainActivity.this, "Fill in all details", Toast.LENGTH_LONG).show();
 
                 }
@@ -166,17 +160,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    // Function to intialise scan mode
-    public void scan(){
-        final Activity activity = this;
-        IntentIntegrator integrator = new IntentIntegrator(activity);
-        integrator.setDesiredBarcodeFormats(IntentIntegrator.ALL_CODE_TYPES);
-        integrator.setPrompt("Set over barcode of SIES GST College ID");
-        integrator.setCameraId(0);
-        integrator.setBeepEnabled(false);
-        integrator.setBarcodeImageEnabled(false);
-        integrator.initiateScan();
 
-    }
 
 }
