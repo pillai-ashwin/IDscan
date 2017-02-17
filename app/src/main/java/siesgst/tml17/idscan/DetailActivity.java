@@ -240,7 +240,7 @@ public class DetailActivity extends AppCompatActivity {
     public void UIDupdate(String prn)
     {
         String id1 = session.getID();
-        String url = "http://192.168.43.221/update.php";
+        String url = "http://192.168.43.10/update.php";
         OkHttpClient client = new OkHttpClient();
         RequestBody body = new FormBody.Builder()
                 .add("event_id", id1)

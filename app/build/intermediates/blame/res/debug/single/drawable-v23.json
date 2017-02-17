@@ -4,6 +4,10 @@
         "source": "/Users/rohitramaswamy/Desktop/IDscan/C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\drawable-v23\\abc_control_background_material.xml"
     },
     {
+        "merged": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/merged/debug/drawable-v23/abc_control_background_material.xml",
+        "source": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/drawable-v23/abc_control_background_material.xml"
+    },
+    {
         "merged": "/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/res/merged/debug/drawable-v23/abc_control_background_material.xml",
         "source": "/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/drawable-v23/abc_control_background_material.xml"
     }

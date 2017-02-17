@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.v("prog?","prog.");
                 progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
                 progressDialog.show();
-                String url = "http://192.168.43.221/login.php";
+                String url = "http://192.168.43.10/login.php";
                 if(username.getText().toString().equals("a")&&password.getText().toString().equals("a")){
                     startActivity(new Intent(MainActivity.this,DetailActivity.class));
 

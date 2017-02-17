@@ -40,7 +40,7 @@ public class ListAsync extends AsyncTask<String,Void,String>
     @Override
     protected String doInBackground(String... params) {
 
-        String url2 = "http://192.168.43.221/login.php&event_id="+event_id;
+        String url2 = "http://192.168.43.10/list.php?event_id="+event_id;
         HttpURLConnection httpURLConnection = null;
         InputStream inputStream = null;
         StringBuilder stringBuilder = new StringBuilder();
