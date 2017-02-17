@@ -12,12 +12,12 @@
         "source": "/Users/rohitramaswamy/Desktop/IDscan/C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\color-v23\\abc_tint_switch_thumb.xml"
     },
     {
-        "merged": "/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
-        "source": "/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color-v23/abc_tint_btn_checkable.xml"
-    },
-    {
         "merged": "/Users/rohitramaswamy/Desktop/IDscan/C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_switch_track.xml",
         "source": "/Users/rohitramaswamy/Desktop/IDscan/C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\color-v23\\abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color-v23/abc_tint_btn_checkable.xml"
     },
     {
         "merged": "/Users/rohitramaswamy/Desktop/IDscan/C:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\design_tint_password_toggle.xml",
@@ -28,12 +28,12 @@
         "source": "/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color-v23/abc_tint_switch_track.xml"
     },
     {
-        "merged": "/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
-        "source": "/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color-v23/abc_tint_switch_thumb.xml"
-    },
-    {
         "merged": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
         "source": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color-v23/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
+        "source": "/Users/rohitramaswamy/Desktop/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color-v23/abc_tint_switch_thumb.xml"
     },
     {
         "merged": "/home/adicool/AndroidStudioProjects/IDscan/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",

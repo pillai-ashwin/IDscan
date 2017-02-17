@@ -26,21 +26,34 @@ public class ListAsync extends AsyncTask<String,Void,String>
     public List<Player> player;
     public RecyclerViewAdapter adapter;
     public Context context;
-    public ProgressDialog prog;
+    ProgressDialog prog ;
 
-    public ListAsync(String event_id, List<Player> player,RecyclerViewAdapter adapter,Context context,ProgressDialog prog)
+    //public ProgressDialog prog;
+
+    public ListAsync(String event_id, List<Player> player,RecyclerViewAdapter adapter,Context context)
     {
         this.event_id = event_id;
         this.player = player;
         this.adapter = adapter;
         this.context = context;
-        this.prog = prog;
+        //this.prog = prog;
+    }
+
+    @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+        prog=new ProgressDialog(context);
+        prog.setCancelable(true);
+        prog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        prog.setMessage("Getting List...");
+        prog.setTitle("TML");
+        prog.show();
     }
 
     @Override
     protected String doInBackground(String... params) {
 
-        String url2 = "http://192.168.43.10/list.php?event_id="+event_id;
+        String url2 = "http://development.siesgst.ac.in/list.php?event_id="+event_id;
         HttpURLConnection httpURLConnection = null;
         InputStream inputStream = null;
         StringBuilder stringBuilder = new StringBuilder();
@@ -48,7 +61,7 @@ public class ListAsync extends AsyncTask<String,Void,String>
 
             URL url = new URL(url2);
             httpURLConnection = (HttpURLConnection)url.openConnection();
-            httpURLConnection.setRequestMethod("POST");
+            httpURLConnection.setRequestMethod("GET");
             inputStream =  new BufferedInputStream(httpURLConnection.getInputStream());
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
