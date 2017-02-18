@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:id="@+id/detailactivity"
     tools:context="siesgst.tml17.idscan.DetailActivity">
 
     <android.support.design.widget.AppBarLayout

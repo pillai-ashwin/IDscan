@@ -25,7 +25,7 @@ public class SessionManager {
     // Shared pref mode
     int PRIVATE_MODE = 0;
 
-    static List<Player> player = new ArrayList<>();
+    private List<Player> player = new ArrayList<>();
 
     // Sharedpref file name
     private static final String PREF_NAME = "MyPreferences";
@@ -131,13 +131,15 @@ public class SessionManager {
 
 
     void addPlayer(Player pl) {
-        Log.v("tag", "added to player");
-
+        Log.v("tag", "added to player=");
+        //player.clear();
         player.add(pl);
+
     }
 
     List<Player> getPlayer() {
-        Log.v("tag", "fetched player");
+
+        Log.v("tag", "fetched player="+player.size()+" ");
         return player;
     }
 

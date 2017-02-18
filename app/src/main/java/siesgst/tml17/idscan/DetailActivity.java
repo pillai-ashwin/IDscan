@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -27,6 +28,7 @@ import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.util.List;
@@ -54,6 +56,7 @@ public class DetailActivity extends AppCompatActivity {
     Button logout;
     TextView add;
     RecyclerView recyclerView;
+     View parentLayout   ;
     List<Player> listOfPlayers;
     StringBuffer stringBuffer = new StringBuffer();
 
@@ -66,11 +69,12 @@ public class DetailActivity extends AppCompatActivity {
 
         session = new SessionManager(DetailActivity.this);
 
+         parentLayout = findViewById(R.id.contentdetail);
+
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-        PlayerList();// call to async task
-        recyclerViewAdapter = new RecyclerViewAdapter(DetailActivity.this);
+        PlayerList(false);// call to async task
+
         recyclerView.setLayoutManager(new LinearLayoutManager(DetailActivity.this));
-        recyclerView.setAdapter(recyclerViewAdapter);
     }
 
 
@@ -113,9 +117,8 @@ public class DetailActivity extends AppCompatActivity {
 
         }
         else if (id == R.id.update_manually) {
-
-            listOfPlayers = recyclerViewAdapter.getselectedList();
-
+            RecyclerViewAdapter adapter = (RecyclerViewAdapter) recyclerView.getAdapter();
+            listOfPlayers = adapter.getselectedList();
             if (listOfPlayers.size() != 0) {
 
                 for (int i = 0; i < listOfPlayers.size(); i++) {
@@ -231,9 +234,15 @@ public class DetailActivity extends AppCompatActivity {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Log.d("TML", "scanned barcode");
+                        PlayerList(true);
+                    }
+                });
             }
-        });
-        PlayerList();// call to update the list
+        });// call to update the list
     }
 
     public void UIDupdate(String prn) {
@@ -269,7 +278,15 @@ public class DetailActivity extends AppCompatActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                Toast.makeText(DetailActivity.this, "Updated", Toast.LENGTH_SHORT).show();
+                               // Toast.makeText(DetailActivity.this, "Updated", Toast.LENGTH_SHORT).show();
+                                Snackbar snackbar= Snackbar.make(parentLayout,"Updated",Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
+                                   @Override
+                                   public void onClick(View v) {
+                                   }
+                               });
+
+                                snackbar.show();
+                                PlayerList(true);
                             }
                         });
                         Log.v("tag", "Can play again");
@@ -287,7 +304,7 @@ public class DetailActivity extends AppCompatActivity {
                 }
             }
         });
-        PlayerList();// call to update the list
+       // call to update the list
     }
 
     void buildDialog(boolean decide) {
@@ -295,24 +312,29 @@ public class DetailActivity extends AppCompatActivity {
         final AlertDialog.Builder builder = new AlertDialog.Builder(DetailActivity.this);
         LayoutInflater inflater = DetailActivity.this.getLayoutInflater();
         final View view = inflater.inflate(R.layout.uid_result, null);
+
         // Set up the input
         builder.setView(view);
+        final TextView status=(TextView)view.findViewById(R.id.play_status) ;
 
         final TextView button = (TextView) view.findViewById(R.id.scan_status);
         final ImageView img = (ImageView) view.findViewById(R.id.uid_result_image);
-        final TextView name = (TextView) view.findViewById(R.id.result_name);
 
         //GradientDrawable imgBackground = (GradientDrawable) img.getBackground();
+        Log.v("Detail Name",session.getName());
+        Log.v("Detail ID",session.getID());
 
-        name.setText(barcode_scan);
+
 
         if (decide) {
             img.setBackgroundColor(Color.parseColor("#00E676"));
             button.setBackgroundColor(Color.parseColor("#00E676"));
             img.setImageResource(R.drawable.tick);
+            status.setText("Play!");
         } else {
             img.setBackgroundColor(Color.parseColor("#F44336"));
             button.setBackgroundColor(Color.parseColor("#F44336"));
+            status.setText("Can't Play");
 
             img.setImageResource(R.drawable.cross);
         }
@@ -325,14 +347,14 @@ public class DetailActivity extends AppCompatActivity {
         builder.show();
     }
 
-    public void PlayerList() {
+    public void PlayerList(boolean isRefresh) {
         //checking if user is offline
         final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
         if (activeNetwork != null) {
 
             Log.v("tag", "inplayerlist");
-            ListAsync listAsync = new ListAsync(session.getID(), DetailActivity.this, recyclerView, recyclerViewAdapter);
+            ListAsync listAsync = new ListAsync(session.getID(), DetailActivity.this, recyclerView,recyclerViewAdapter, isRefresh);
             listAsync.execute();
         } else {
             Toast.makeText(DetailActivity.this, "No Network Connection!", Toast.LENGTH_SHORT).show();

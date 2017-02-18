@@ -37,37 +37,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:id="@+id/checkBox"
-        android:layout_above="@+id/contactlayout"/>
+        android:layout_above="@+id/playerID"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="30dp"
-        android:id="@+id/contactlayout"
-        android:layout_alignParentEnd="true"
-        android:paddingBottom="10dp"
-        android:layout_toRightOf="@+id/playerID"
-        android:layout_below="@+id/player_name">
 
-        <TextView
-            android:id="@+id/ContactText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Contact Number:"
-            android:textColor="#9E9E9E"
-            />
-
-        <TextView
-            android:id="@+id/ContactNumber"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingTop="10dp"
-            android:text="9987884770"
-            android:textColor="#212121"
-            />
-    </LinearLayout>
 
     <View
         android:id="@+id/faint_line"

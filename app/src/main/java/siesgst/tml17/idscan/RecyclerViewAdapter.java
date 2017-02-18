@@ -23,20 +23,31 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     SessionManager session;
 
 
-    // UpdateSQLite sql;
+
     private LayoutInflater layoutInflater;
     Context ctx;
 
     public List<Player> getselectedList() {
-        return selected;
+
+            return selected;
+
+
     }
 
-    public RecyclerViewAdapter(Context context) {
+    public List<Integer> getSelectedItems() {
+        List<Integer> items = new ArrayList<Integer>(selectedItems.size());
+        for (int i = 0; i < selectedItems.size(); i++) {
+            items.add(selectedItems.keyAt(i));
+        }
+        return items;
+    }
 
-        Log.v("tag", "Recycler ");
+    public RecyclerViewAdapter(Context context, List<Player> playerList) {
+
+        Log.v("tag recyler", "size="+playerList.size()+" ");
 
         session = new SessionManager(context);
-        player = session.getPlayer();
+        player = playerList;
         selectedItems = new SparseBooleanArray();
 
         ctx = context;
@@ -52,13 +63,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         notifyItemChanged(pos);
     }
 
-    public List<Integer> getSelectedItems() {
-        List<Integer> items = new ArrayList<Integer>(selectedItems.size());
-        for (int i = 0; i < selectedItems.size(); i++) {
-            items.add(selectedItems.keyAt(i));
-        }
-        return items;
-    }
+
 
     public static class PlayerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
@@ -74,7 +79,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             super(itemView);
             playerName = (TextView) itemView.findViewById(R.id.player_name);
             UniqueID = (TextView) itemView.findViewById(R.id.playerID);
-            ContactNumber = (TextView) itemView.findViewById(R.id.ContactNumber);
             check = (CheckBox) itemView.findViewById(R.id.checkBox);
             itemView.setLongClickable(true);
             check.setOnClickListener(this);
@@ -92,6 +96,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         }
 
 
+    }
+
+    public void clearSelections() {
+        selected.clear();
+        notifyDataSetChanged();
     }
 
 
@@ -118,7 +127,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         playerViewHolder.UniqueID.setText(player.get(i).UID);
 
-        playerViewHolder.ContactNumber.setText(player.get(i).Number);
 
         playerViewHolder.setItemClickListener(new ItemClickListener() {
             @Override

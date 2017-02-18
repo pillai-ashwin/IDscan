@@ -24,20 +24,22 @@ import java.util.List;
 public class ListAsync extends AsyncTask<String, Void, String> {
     String event_id;
     public List<Player> player;
-    public RecyclerViewAdapter recyclerViewAdapter;
     public Context context;
     ProgressDialog prog;
     SessionManager session;
     RecyclerView recyclerView;
+    boolean isRefresh = false;
+    RecyclerViewAdapter recyclerViewAdapter;
 
 
-    public ListAsync(String event_id, Context context, RecyclerView recyclerView, RecyclerViewAdapter recyclerViewAdapter) {
+    public ListAsync(String event_id, Context context, RecyclerView recyclerView,RecyclerViewAdapter recyclerViewAdapter, boolean isRefresh) {
         this.event_id = event_id;
         this.player = player;
-        this.recyclerViewAdapter = recyclerViewAdapter;
         this.context = context;
         session = new SessionManager(context);
         this.recyclerView = recyclerView;
+        this.recyclerViewAdapter=recyclerViewAdapter;
+        this.isRefresh = isRefresh;
         //this.prog = prog;
     }
 
@@ -94,6 +96,7 @@ public class ListAsync extends AsyncTask<String, Void, String> {
             JSONObject root = new JSONObject(s);
             String status = root.optString("status");
             JSONArray MessageArray = root.optJSONArray("message");
+            Log.d("TML MSG ARRAY LEN", MessageArray.length() + "");
             for (int i = 0; i < MessageArray.length(); i++) {
                 JSONObject jsonObject = MessageArray.optJSONObject(i);
                 String id = jsonObject.optString("id");
@@ -104,8 +107,10 @@ public class ListAsync extends AsyncTask<String, Void, String> {
                 String statusPlayer = jsonObject.optString("status");
 
                 if (statusPlayer.equalsIgnoreCase("0")) {
+                    Log.d("TML PLAY", "can play");
                     session.addPlayer(new Player(user_id, event_name, " ", "Can Play"));
                 } else {
+                    Log.d("TML PLAY", "can't play");
                     session.addPlayer(new Player(user_id, event_name, " ", "Can't Play"));
 
                 }
@@ -117,6 +122,11 @@ public class ListAsync extends AsyncTask<String, Void, String> {
             e.printStackTrace();
         }
 
+        if (isRefresh) {
+            recyclerView.getAdapter().notifyDataSetChanged();
+        } else {
+            recyclerView.setAdapter(new RecyclerViewAdapter(context, session.getPlayer()));
+        }
 
     }
 
