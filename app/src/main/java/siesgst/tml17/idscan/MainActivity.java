@@ -1,8 +1,12 @@
 package siesgst.tml17.idscan;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -79,82 +83,110 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 String url = "http://development.siesgst.ac.in/login.php";
+                final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+                final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
+                if (activeNetwork != null) {
 
-                if (!isEmpty(username.getText().toString()) && !isEmpty(password.getText().toString())) {
+                    if (!isEmpty(username.getText().toString()) && !isEmpty(password.getText().toString())) {
 
-                    final ProgressDialog progressDialog = new ProgressDialog(MainActivity.this);
+                        final ProgressDialog progressDialog = new ProgressDialog(MainActivity.this);
 
-                    progressDialog.setCancelable(true);
-                    progressDialog.setMessage("Signing In...");
-                    Log.v("prog?", "prog.");
-                    progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-                    progressDialog.show();
+                        progressDialog.setCancelable(true);
+                        progressDialog.setMessage("Signing In...");
+                        Log.v("prog?", "prog.");
+                        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                        progressDialog.show();
 
-                    OkHttpClient client = new OkHttpClient();
+                        OkHttpClient client = new OkHttpClient();
 
-                    RequestBody body = new FormBody.Builder()
-                            .add("email", username.getText().toString())
-                            .add("password", password.getText().toString())
-                            .build();
-                    request = new Request.Builder()
-                            .url(url)
-                            .method("POST", body.create(null, new byte[0]))
-                            .post(body)
-                            .build();
-                    Log.v("login", body.toString());
+                        RequestBody body = new FormBody.Builder()
+                                .add("email", username.getText().toString())
+                                .add("password", password.getText().toString())
+                                .build();
+                        request = new Request.Builder()
+                                .url(url)
+                                .method("POST", body.create(null, new byte[0]))
+                                .post(body)
+                                .build();
+                        Log.v("login", body.toString());
 
-                    client.newCall(request).enqueue(new Callback() {
-                        @Override
-                        public void onFailure(Call call, IOException e) {
-                            e.printStackTrace();
-                        }
-
-                        @Override
-                        public void onResponse(Call call, Response response) throws IOException {
-                            responseString = response.body().string();
-                            Log.v("response", responseString);
-                            if (responseString.contains("true")) {
-
-                                JSONObject root = null;
-
-                                try {
-                                    root = new JSONObject(responseString);
-                                    String status = root.optString("status");
-                                    String message = root.optString("message");
-                                    JSONArray result = root.optJSONArray("result");
-
-                                    for (int i = 0; i < result.length(); i++) {
-
-                                        JSONObject resultArrayObject = result.optJSONObject(i);
-                                        String id = resultArrayObject.optString("id");
-                                        String fname = resultArrayObject.optString("fname");
-                                        String lname = resultArrayObject.optString("lname");
-                                        String email = resultArrayObject.optString("email");
-                                        String contact = resultArrayObject.optString("contact");
-                                        event_id = resultArrayObject.optString("event_id");
-                                        String event_name = resultArrayObject.optString("event_name");
-                                        String created = resultArrayObject.optString("created_at");
-                                        String updated = resultArrayObject.optString("updated_at");
-                                        session.createLoginSession(fname + "  " + lname, email, event_name, contact, event_id);
-
-
-                                    }
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                }
-
-                                Intent intent = new Intent(MainActivity.this, DetailActivity.class);
-                                startActivity(intent);
-                                finish();
-                                progressDialog.dismiss();
+                        client.newCall(request).enqueue(new Callback() {
+                            @Override
+                            public void onFailure(Call call, IOException e) {
+                                e.printStackTrace();
                             }
+
+                            @Override
+                            public void onResponse(Call call, Response response) throws IOException {
+                                responseString = response.body().string();
+                                Log.v("response", responseString);
+                                if (responseString.contains("true")) {
+
+                                    JSONObject root = null;
+
+                                    try {
+                                        root = new JSONObject(responseString);
+                                        String status = root.optString("status");
+                                        String message = root.optString("message");
+                                        JSONArray result = root.optJSONArray("result");
+
+                                        for (int i = 0; i < result.length(); i++) {
+
+                                            JSONObject resultArrayObject = result.optJSONObject(i);
+                                            String id = resultArrayObject.optString("id");
+                                            String fname = resultArrayObject.optString("fname");
+                                            String lname = resultArrayObject.optString("lname");
+                                            String email = resultArrayObject.optString("email");
+                                            String contact = resultArrayObject.optString("contact");
+                                            event_id = resultArrayObject.optString("event_id");
+                                            String event_name = resultArrayObject.optString("event_name");
+                                            String created = resultArrayObject.optString("created_at");
+                                            String updated = resultArrayObject.optString("updated_at");
+                                            session.createLoginSession(fname + "  " + lname, email, event_name, contact, event_id);
+
+
+                                        }
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
+                                    }
+
+                                    Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                    progressDialog.dismiss();
+                                } else {
+                                    Snackbar snackbar = Snackbar.make(findViewById(R.id.login_layout), "Login Failed! Check your credentials", Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                        }
+                                    });
+
+                                    snackbar.show();
+                                    progressDialog.dismiss();
+
+                                }
+                            }
+
+                        });
+                    } else {
+                        Snackbar snackbar = Snackbar.make(findViewById(R.id.login_layout), "Fill in all details", Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                            }
+                        });
+
+                        snackbar.show();
+
+                    }
+                }
+                else{
+                    Snackbar snackbar = Snackbar.make(findViewById(R.id.login_layout), "No Network connection!", Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
                         }
-
                     });
-                } else {
 
-                    Toast.makeText(MainActivity.this, "Fill in all details", Toast.LENGTH_LONG).show();
-
+                    snackbar.show();
                 }
             }
         });

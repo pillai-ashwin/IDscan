@@ -357,7 +357,13 @@ public class DetailActivity extends AppCompatActivity {
             ListAsync listAsync = new ListAsync(session.getID(), DetailActivity.this, recyclerView,recyclerViewAdapter, isRefresh);
             listAsync.execute();
         } else {
-            Toast.makeText(DetailActivity.this, "No Network Connection!", Toast.LENGTH_SHORT).show();
+            Snackbar snackbar = Snackbar.make(parentLayout, "No Network connection!", Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                }
+            });
+
+            snackbar.show();
         }
     }
 }

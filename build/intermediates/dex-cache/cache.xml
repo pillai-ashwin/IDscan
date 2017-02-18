@@ -2,202 +2,184 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="15b049fedbd8e3926bf99d9e45dfc9b2a1043bb9">
-        <dex dex="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-transition-25.1.1_4bfaef26e2dd2e1fb49f00b96eae213e1a6526f8/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
-        <dex dex="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.1.1_32f6465a24dbd48fbdb8e37b3024f572b4dc0b60/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
-        <dex dex="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.1.1_11a715ef5592f417c9be242afb3e6516463582c6/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
-        <dex dex="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.1.1_bef0a5d1803ba59b00801f9b82d616bea20eea60/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c9649557905bf7a80fca9e0d54cbcb7662627860">
-        <dex dex="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.1.1_ce9b12a1d087ca2940ab8ec9f391d241be92c846/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
-        <dex dex="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.1.1_e9d51b78d308f27d19c7fa1fddc88955deead1a1/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="cd7951e04cfb9a8bf008d544a478d9a8d8192d38">
-        <dex dex="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-25.1.1_6a60be50619b4a133ebb9ec288ae6098594b7dc4/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.1.1_5e5f6dbebf9ce36654825b925343ab48bd8c3927/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
-        <dex dex="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.1.1_0b126d98f4c8de1676bdde243fe6a5c88323022c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/leprechaun/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.11.0/840897fcd7223a8143f1d9b6f69714e7be34fd50/okio-1.11.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="840897fcd7223a8143f1d9b6f69714e7be34fd50">
-        <dex dex="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.11.0_b2a2000d49ea444f1ba7d737e2807645ad49c9c1/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
-        <dex dex="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.1.1_cdae4190fea133c54955bca8446b99e2c6d16b24/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/leprechaun/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.1/support-annotations-25.1.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
-        <dex dex="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.1.1_468ca3f1b63082359ad67b44a934489381ac5062/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
-        <dex dex="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-8.4.0_0ea9b8d1fdbfc0634fff2c69f2f22c48971e0950/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="841ae9f09d4380f8ede8e6f1321d4e1834de7ef3">
-        <dex dex="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_776b855f36ed4f0207149530baead4188f6439e4/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/leprechaun/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.5.0/4b0bb6bfbecbdd42b97ff400af342bfe7f32bc83/okhttp-3.5.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="4b0bb6bfbecbdd42b97ff400af342bfe7f32bc83">
-        <dex dex="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.5.0_11e70f5e234fc8c6ddd29078eefa03a9d50d5472/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/leprechaun/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.2.1/2287494d4f5f9f3a9a2bb6980e3f32053721b315/core-3.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="2287494d4f5f9f3a9a2bb6980e3f32053721b315">
-        <dex dex="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/10/core-3.2.1_1a2f266f91c5399daf0b36513f6a18a051a03292/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/jars/classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
-        <dex dex="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-8.4.0_cdbb9920e4a15dfa0c2aae812bf5c9c3e0987390/classes.dex" />
+        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-8.4.0_531f7fcb73e74d19af71688708fc327d1c11dc0a.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/jars/classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.1\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
-        <dex dex="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.1.1_6a0b70f831f1fa6c4bcb0331892cfbca03e0799a/classes.dex" />
+        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
+        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.1.1_cdbbb554cde091a068c3856305470a218894284b.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.4.0/jars/classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-8.4.0_690ae487abd4138bee3bd877e66816742963e077.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
-        <dex dex="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appindexing-8.4.0_0020a460d1597b3b02f983f98029ad324f8c9542/classes.dex" />
+        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appindexing-8.4.0_8e63d7bc7524fb23d214d0a5df2847b80e49b36e.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/jars/classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.1.1_6494e9b5fb5bd694bb746164d40015699a9f0c8e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HP\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.5.0\4b0bb6bfbecbdd42b97ff400af342bfe7f32bc83\okhttp-3.5.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4b0bb6bfbecbdd42b97ff400af342bfe7f32bc83">
+        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\okhttp-3.5.0_ee2baf360111eb2d3fd0cdb9bbb74522c0696212.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HP\.gradle\caches\modules-2\files-2.1\com.google.zxing\core\3.2.1\2287494d4f5f9f3a9a2bb6980e3f32053721b315\core-3.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2287494d4f5f9f3a9a2bb6980e3f32053721b315">
+        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\core-3.2.1_e7082cf388b929b84564c87e06ec1b3d3cb1caef.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
+        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.1.1_48da7c00ed7806119ca347460cec5adc0e302b9e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.1\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
-        <dex dex="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.1.1_7bac46f3c6a14071ef0a612352980cc42220f63a/classes.dex" />
+        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.1.1_ac26c639bda4f9170ad557c27f34b5cad55e44d5.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\design\25.1.1\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="fa0984cf06d7373a13c17e0f6e8a6500a71fd4b7">
-        <dex dex="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_06bf1eaf3d419e18b537130bf4245e47efbd32bb/classes.dex" />
+        sha1="cd7951e04cfb9a8bf008d544a478d9a8d8192d38">
+        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.android.support-design-25.1.1_c34cd00745ab4c818de2a54be2a3037034ac25ff.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.2.0/jars/classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\HP\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.11.0\840897fcd7223a8143f1d9b6f69714e7be34fd50\okio-1.11.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="840897fcd7223a8143f1d9b6f69714e7be34fd50">
+        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\okio-1.11.0_de278b2df10cb35e6856cef68cc98729c89f3f95.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HP\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.1.1\support-annotations-25.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
+        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\support-annotations-25.1.1_e694eb5329c313eec404da9ba29bc7f2b18b79c9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\transition\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="15b049fedbd8e3926bf99d9e45dfc9b2a1043bb9">
+        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.android.support-transition-25.1.1_a823de917962fe01b95afd69ba4bcdf27386f2f7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c9649557905bf7a80fca9e0d54cbcb7662627860">
+        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-25.1.1_21029247dcd0b4d3cb4710c1dddeb34a52bd82ab.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
+        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.1.1_c0baf4810265da06bcb086bf81f841bb677a907f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.1.1_da127bacbad80d0a0672b8719faf97693b5adfba.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
+        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.1.1_58227341a3e482d7a9f41adb5ef4b3eee0412c42.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.2.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="d4ce6303165f20650850673bd5891fbcca80caae">
-        <dex dex="/home/leprechaun/AndroidStudioProjects/IDscan/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.journeyapps-zxing-android-embedded-3.2.0_2ce046e853681f56c127737b3f86fa3f935794d5/classes.dex" />
+        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.journeyapps-zxing-android-embedded-3.2.0_d582b148d285953b1ffe43e2a09072a47cefd905.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
+        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.1.1_036b403fbacf447e37314f69a7ad6f49243df091.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
+        <dex dex="C:\Users\HP\AndroidStudioProjects\IDscan\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.1.1_fa795763b27701bb40a8c36d82f380404a2e542d.jar" />
     </item>
 
 </items>
