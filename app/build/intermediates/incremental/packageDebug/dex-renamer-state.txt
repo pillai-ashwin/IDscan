@@ -1,4 +1,4 @@
-#Sat Feb 18 22:07:57 IST 2017
+#Sun Feb 19 12:26:01 IST 2017
 base.0=C\:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
 file.0=C\:\\Users\\HP\\AndroidStudioProjects\\IDscan\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

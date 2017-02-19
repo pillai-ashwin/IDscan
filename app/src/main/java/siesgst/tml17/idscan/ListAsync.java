@@ -17,9 +17,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
 
-/**
- * Created by rohitramaswamy on 16/02/17.
- */
 
 public class ListAsync extends AsyncTask<String, Void, String> {
     String event_id;

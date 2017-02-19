@@ -58,6 +58,7 @@ public class DetailActivity extends AppCompatActivity {
     RecyclerView recyclerView;
      View parentLayout   ;
     List<Player> listOfPlayers;
+    AlertDialog alert;
     StringBuffer stringBuffer = new StringBuffer();
 
 
@@ -119,12 +120,15 @@ public class DetailActivity extends AppCompatActivity {
         else if (id == R.id.update_manually) {
             RecyclerViewAdapter adapter = (RecyclerViewAdapter) recyclerView.getAdapter();
             listOfPlayers = adapter.getselectedList();
+
             if (listOfPlayers.size() != 0) {
 
                 for (int i = 0; i < listOfPlayers.size(); i++) {
                     String prn = listOfPlayers.get(i).getUID();
                     UIDupdate(prn);
                 }
+                adapter.clear();
+                adapter.notifyDataSetChanged();
 
             }
             else {
@@ -138,6 +142,8 @@ public class DetailActivity extends AppCompatActivity {
         else if (id == R.id.log_out_menu) {
 
             session.logoutUser(DetailActivity.this);
+            finish();
+
         }
         return super.onOptionsItemSelected(item);
     }
@@ -339,12 +345,13 @@ public class DetailActivity extends AppCompatActivity {
             img.setImageResource(R.drawable.cross);
         }
         // Set up the buttons
-        button.setOnClickListener(new View.OnClickListener() {
+        final AlertDialog d =builder.show();
+        button.setOnClickListener(new Button.OnClickListener() {
+
             @Override
-            public void onClick(View view) {
-            }
-        });
-        builder.show();
+            public void onClick(View arg0) {
+                d.dismiss();
+            }});
     }
 
     public void PlayerList(boolean isRefresh) {

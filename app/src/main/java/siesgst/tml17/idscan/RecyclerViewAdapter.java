@@ -20,6 +20,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private SparseBooleanArray selectedItems;
     List<Player> selected = new ArrayList<Player>();
     ActionMode action;
+
     SessionManager session;
 
 
@@ -29,9 +30,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public List<Player> getselectedList() {
 
+
             return selected;
 
 
+    }
+
+    void clear(){
+        selected.clear();
     }
 
     public List<Integer> getSelectedItems() {
