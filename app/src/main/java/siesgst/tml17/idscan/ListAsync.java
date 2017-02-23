@@ -5,6 +5,8 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -27,9 +29,12 @@ public class ListAsync extends AsyncTask<String, Void, String> {
     RecyclerView recyclerView;
     boolean isRefresh = false;
     RecyclerViewAdapter recyclerViewAdapter;
+    View view;
+    int totalParticipants;
+    TextView sizeOfList;
 
 
-    public ListAsync(String event_id, Context context, RecyclerView recyclerView,RecyclerViewAdapter recyclerViewAdapter, boolean isRefresh) {
+    public ListAsync(String event_id, Context context, RecyclerView recyclerView,RecyclerViewAdapter recyclerViewAdapter, boolean isRefresh,View view) {
         this.event_id = event_id;
         this.player = player;
         this.context = context;
@@ -37,6 +42,8 @@ public class ListAsync extends AsyncTask<String, Void, String> {
         this.recyclerView = recyclerView;
         this.recyclerViewAdapter=recyclerViewAdapter;
         this.isRefresh = isRefresh;
+        this.view = view;
+        sizeOfList = (TextView) view.findViewById(R.id.list_size);
         //this.prog = prog;
     }
 
@@ -80,19 +87,11 @@ public class ListAsync extends AsyncTask<String, Void, String> {
             }
         }
         String result = stringBuilder.toString();
-        Log.v("tag", result);
-        return result;
-
-    }
-
-    @Override
-    protected void onPostExecute(String s) {
-        Log.v("responsePost", "OnPostExcecute !");
-        Log.v("response", s);
         try {
-            JSONObject root = new JSONObject(s);
+            JSONObject root = new JSONObject(result);
             String status = root.optString("status");
             JSONArray MessageArray = root.optJSONArray("message");
+            totalParticipants=MessageArray.length();
             Log.d("TML MSG ARRAY LEN", MessageArray.length() + "");
             for (int i = 0; i < MessageArray.length(); i++) {
                 JSONObject jsonObject = MessageArray.optJSONObject(i);
@@ -118,7 +117,17 @@ public class ListAsync extends AsyncTask<String, Void, String> {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        Log.v("tag", result);
+        return result;
 
+    }
+
+    @Override
+    protected void onPostExecute(String s) {
+        Log.v("responsePost", "OnPostExcecute !");
+        Log.v("response", s);
+        String d=" "+totalParticipants;
+        sizeOfList.setText(d);
         if (isRefresh) {
             recyclerView.getAdapter().notifyDataSetChanged();
         } else {

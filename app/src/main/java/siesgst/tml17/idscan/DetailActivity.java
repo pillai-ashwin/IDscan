@@ -18,6 +18,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -28,7 +29,6 @@ import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.util.List;
@@ -56,9 +56,10 @@ public class DetailActivity extends AppCompatActivity {
     Button logout;
     TextView add;
     RecyclerView recyclerView;
-     View parentLayout   ;
+    View parentLayout,detail;
     List<Player> listOfPlayers;
     AlertDialog alert;
+    TextView text;
     StringBuffer stringBuffer = new StringBuffer();
 
 
@@ -69,9 +70,9 @@ public class DetailActivity extends AppCompatActivity {
         Log.v("tag", "back to OnCreate");
 
         session = new SessionManager(DetailActivity.this);
-
-         parentLayout = findViewById(R.id.contentdetail);
-
+        text = (TextView) findViewById(R.id.list_size);
+        parentLayout = findViewById(R.id.contentdetail);
+        detail = ((ViewGroup) this.findViewById(R.id.contentdetail)).getChildAt(0);
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         PlayerList(false);// call to async task
 
@@ -361,7 +362,7 @@ public class DetailActivity extends AppCompatActivity {
         if (activeNetwork != null) {
 
             Log.v("tag", "inplayerlist");
-            ListAsync listAsync = new ListAsync(session.getID(), DetailActivity.this, recyclerView,recyclerViewAdapter, isRefresh);
+            ListAsync listAsync = new ListAsync(session.getID(), DetailActivity.this, recyclerView,recyclerViewAdapter, isRefresh,parentLayout);
             listAsync.execute();
         } else {
             Snackbar snackbar = Snackbar.make(parentLayout, "No Network connection!", Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
